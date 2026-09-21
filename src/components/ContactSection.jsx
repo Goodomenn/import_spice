@@ -69,7 +69,7 @@ export default function ContactSection({ prefilledProduct }) {
                 <div className="desk-details">
                   <div className="desk-line">
                     <Mail size={15} className="desk-icon" />
-                    <span>exports@zfish-global.com</span>
+                    <span>fishkenya11@gmail.com</span>
                   </div>
                   <div className="desk-line">
                     <Phone size={15} className="desk-icon" />
@@ -79,11 +79,11 @@ export default function ContactSection({ prefilledProduct }) {
               </div>
 
               <div className="desk-item">
-                <div className="desk-badge">Fleet Sourcing & Procurement</div>
+                <div className="desk-badge">Commodity Procurement & Import Desk</div>
                 <div className="desk-details">
                   <div className="desk-line">
                     <Mail size={15} className="desk-icon" />
-                    <span>procurement@zfish-global.com</span>
+                    <span>fishkenya11@gmail.com</span>
                   </div>
                   <div className="desk-line">
                     <Phone size={15} className="desk-icon" />
@@ -93,11 +93,11 @@ export default function ContactSection({ prefilledProduct }) {
               </div>
 
               <div className="desk-item">
-                <div className="desk-badge">Quality Assurance & Lab Documentation</div>
+                <div className="desk-badge">Quality Assurance & Origin Inspection</div>
                 <div className="desk-details">
                   <div className="desk-line">
                     <Mail size={15} className="desk-icon" />
-                    <span>qa-compliance@zfish-global.com</span>
+                    <span>fishkenya11@gmail.com</span>
                   </div>
                   <div className="desk-line">
                     <Phone size={15} className="desk-icon" />
@@ -127,8 +127,8 @@ export default function ContactSection({ prefilledProduct }) {
                 <h3 className="success-title font-serif">Inquiry Successfully Transmitted</h3>
                 <p className="success-desc">
                   Thank you, <strong>{formData.name}</strong> from <strong>{formData.company || 'your organization'}</strong>. 
-                  Our commercial trade desk has received your request regarding <strong>{formData.product || 'seafood specifications'}</strong>. 
-                  An assigned commercial trader will contact you with current CIF/FOB market offers and technical data sheets shortly.
+                  Our commercial trade desk has received your request regarding <strong>{formData.product || 'commercial product specifications'}</strong>. 
+                  An assigned commercial trader will contact you at <strong>{formData.email}</strong> with current CIF/FOB market offers, volume pricing, and technical data sheets shortly.
                 </p>
                 <button 
                   className="btn btn-primary"
@@ -141,7 +141,7 @@ export default function ContactSection({ prefilledProduct }) {
                       phone: '',
                       subject: 'Commercial Export Inquiry',
                       product: '',
-                      volume: '1x 40ft Reefer FCL (~25 MT)',
+                      volume: '1x 40ft High Cube Container (~25 MT)',
                       destinationPort: '',
                       incoterm: 'CIF Destination Port',
                       message: ''
@@ -176,7 +176,7 @@ export default function ContactSection({ prefilledProduct }) {
                     <input 
                       type="text" 
                       required
-                      placeholder="e.g. Nordic Seafood Wholesalers Ltd"
+                      placeholder="e.g. Global Trading & Logistics Ltd"
                       value={formData.company}
                       onChange={(e) => setFormData({...formData, company: e.target.value})}
                       className="form-input"
@@ -190,7 +190,7 @@ export default function ContactSection({ prefilledProduct }) {
                     <input 
                       type="email" 
                       required
-                      placeholder="e.g. a.vance@nordicseafood.com"
+                      placeholder="e.g. procurement@company.com"
                       value={formData.email}
                       onChange={(e) => setFormData({...formData, email: e.target.value})}
                       className="form-input"
@@ -201,7 +201,7 @@ export default function ContactSection({ prefilledProduct }) {
                     <label className="form-label">Phone / WhatsApp (with country code)</label>
                     <input 
                       type="tel" 
-                      placeholder="e.g. +44 20 7946 0912"
+                      placeholder="e.g. +254 700 000 000 / +44 20 7946 0912"
                       value={formData.phone}
                       onChange={(e) => setFormData({...formData, phone: e.target.value})}
                       className="form-input"
@@ -217,11 +217,11 @@ export default function ContactSection({ prefilledProduct }) {
                       onChange={(e) => setFormData({...formData, subject: e.target.value})}
                       className="form-select"
                     >
-                      <option value="Commercial Export Inquiry">Commercial Export Inquiry (Buy)</option>
-                      <option value="Fleet Procurement Offer">Fleet Procurement / Supplier Offer (Sell)</option>
-                      <option value="Product Specification / Lab COA">Product Specification / Lab COA</option>
-                      <option value="Sample Request">Commercial Sample Request</option>
-                      <option value="Logistics & Reefer Freight">Logistics & Reefer Freight</option>
+                      <option value="Commercial Export Inquiry">Commercial Export Inquiry (Buy Export Goods)</option>
+                      <option value="Commercial Import Inquiry">Commercial Import Inquiry (Buy Import Commodities)</option>
+                      <option value="Product Specification / Lab COA">Product Specification / Technical Sheet / Lab COA</option>
+                      <option value="Commercial Sample Request">Commercial Sample Request</option>
+                      <option value="Supply Chain & Freight Logistics">Supply Chain & Multi-Modal Freight</option>
                     </select>
                   </div>
 
@@ -229,7 +229,7 @@ export default function ContactSection({ prefilledProduct }) {
                     <label className="form-label">Product of Interest</label>
                     <input 
                       type="text" 
-                      placeholder="e.g. Yellowfin Tuna, Atlantic Salmon, Prawns"
+                      placeholder="e.g. Tires, Batteries, Spices, Coffee AA, Sesame, Nuts, Vegetables"
                       value={formData.product}
                       onChange={(e) => setFormData({...formData, product: e.target.value})}
                       className="form-input"

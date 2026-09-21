@@ -9,17 +9,18 @@ export default function Hero({ onOpenQuote }) {
         <div className="hero-content">
           <div className="hero-badge">
             <Shield size={14} className="badge-icon" />
-            <span>GLOBAL SEAFOOD SOURCING & INTERNATIONAL EXPORT</span>
+            <span>GLOBAL SPICE SOURCING & INTERNATIONAL IMPORT AND EXPORT</span>
           </div>
 
           <h1 className="hero-title font-serif">
-            Delivering Premium Ocean Harvests to Global Markets
+            Delivering Premium Import and Export
           </h1>
 
           <p className="hero-description">
-            Zfish is an international trading and processing specialist supplying wild-caught 
-            and farmed seafood to food processors, retail distributors, and commercial wholesalers. 
-            Backed by farm-to-dock traceability and uninterrupted cold-chain excellence.
+            Zfish is an international trading and logistics powerhouse supplying heavy-duty tires, 
+            automotive batteries, and aromatic spices for import, while exporting prime leather products, 
+            world-renowned specialty coffee, pure sesame seeds, nutrient-dense nuts, and fresh farm-grown vegetables. 
+            Backed by origin verification, quality standards, and seamless global freight operations.
           </p>
 
           <div className="hero-actions">
@@ -37,11 +38,11 @@ export default function Hero({ onOpenQuote }) {
           <div className="hero-trust">
             <div className="trust-item">
               <Award size={16} className="trust-icon" />
-              <span>HACCP & ISO 22000</span>
+              <span>ISO 9001 & GlobalGAP Certified</span>
             </div>
             <div className="trust-item">
-              <Snowflake size={16} className="trust-icon" />
-              <span>Deep-Freeze IQF (-28°C)</span>
+              <Globe2 size={16} className="trust-icon" />
+              <span>Direct Origin Procurement</span>
             </div>
             <div className="trust-item">
               <Globe2 size={16} className="trust-icon" />
@@ -55,44 +56,44 @@ export default function Hero({ onOpenQuote }) {
           <div className="visual-card">
             <div className="visual-card-inner">
               <div className="visual-tag">Live Trade Desk</div>
-              <h3 className="visual-title">Global Procurement & Freight Routes</h3>
+              <h3 className="visual-title">Global Procurement & Trade Corridors</h3>
               <p className="visual-desc">
-                Operating direct sourcing operations across the North Atlantic, South Pacific, Indian Ocean, and Mediterranean marine corridors.
+                Managing balanced bilateral import & export routes across Africa, Middle East, Europe, and Asia-Pacific.
               </p>
               
               <div className="corridor-list">
                 <div className="corridor-item">
                   <div className="corridor-status active"></div>
                   <div className="corridor-info">
-                    <strong>North Atlantic Corridor</strong>
-                    <span>Cod, Haddock, Salmon & Halibut</span>
+                    <strong>Import Freight Corridor</strong>
+                    <span>Heavy Tires, Industrial Batteries & Whole Spices</span>
                   </div>
-                  <span className="corridor-route">Rotterdam Hub</span>
+                  <span className="corridor-route">Dubai / Mumbai Hub</span>
                 </div>
                 <div className="corridor-item">
                   <div className="corridor-status active"></div>
                   <div className="corridor-info">
-                    <strong>South Pacific & Humboldt</strong>
-                    <span>Giant Squid, Mackerel & Mahi-Mahi</span>
+                    <strong>Export Commodity Corridor</strong>
+                    <span>Kenya AA Coffee, Humera Sesame, Cashews & Nuts</span>
                   </div>
-                  <span className="corridor-route">Guayaquil / Lima</span>
+                  <span className="corridor-route">Mombasa Gateway</span>
                 </div>
                 <div className="corridor-item">
                   <div className="corridor-status active"></div>
                   <div className="corridor-info">
-                    <strong>Indian Ocean & Bay of Bengal</strong>
-                    <span>Yellowfin Tuna & Black Tiger Prawns</span>
+                    <strong>Fresh Horticultural Air-Bridge</strong>
+                    <span>French Beans, Snow Peas, Herbs & Avocados</span>
                   </div>
-                  <span className="corridor-route">Singapore / Dubai</span>
+                  <span className="corridor-route">NBO / AMS / DXB</span>
                 </div>
               </div>
 
               <div className="visual-footer">
                 <span className="status-indicator">
                   <span className="pulse-dot"></span>
-                  All ocean freight routes operational
+                  Bilateral trade logistics active
                 </span>
-                <a href="#network" className="visual-link">View global ports &rarr;</a>
+                <a href="#network" className="visual-link">View freight network &rarr;</a>
               </div>
             </div>
           </div>
@@ -104,23 +105,23 @@ export default function Hero({ onOpenQuote }) {
         <div className="container">
           <div className="metrics-grid">
             <div className="metric-item">
-              <span className="metric-number">48,000<span className="metric-plus">+</span></span>
-              <span className="metric-label">Metric Tons Exported Annually</span>
+              <span className="metric-number">65,000<span className="metric-plus">+</span></span>
+              <span className="metric-label">Metric Tons Traded Annually</span>
             </div>
             <div className="metric-divider"></div>
             <div className="metric-item">
-              <span className="metric-number">42<span className="metric-plus">+</span></span>
+              <span className="metric-number">45<span className="metric-plus">+</span></span>
               <span className="metric-label">Destination Port Countries</span>
             </div>
             <div className="metric-divider"></div>
             <div className="metric-item">
               <span className="metric-number">100<span className="metric-plus">%</span></span>
-              <span className="metric-label">Dockside Cold-Chain Monitoring</span>
+              <span className="metric-label">Origin Quality & Lab Inspection</span>
             </div>
             <div className="metric-divider"></div>
             <div className="metric-item">
               <span className="metric-number">&lt; 24h</span>
-              <span className="metric-label">Catch-to-Processing Flash Freeze</span>
+              <span className="metric-label">Quotation & Spec Sheet Turnaround</span>
             </div>
           </div>
         </div>

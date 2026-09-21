@@ -53,33 +53,34 @@ export default function Footer() {
             </Link>
 
             <p className="footer-bio">
-              International distributor and processor of certified wild-caught and farmed seafood. 
-              Connecting ocean harvests with global foodservice, industrial canning, and retail chains.
+              International trading house specializing in industrial imports (commercial tires, storage batteries, culinary spices) 
+              and premier exports (specialty coffees, pure sesame seeds, cashew & macadamia nuts, leather hides, and fresh farm vegetables).
             </p>
 
             <div className="footer-compliance-badges">
               <span className="comp-badge">
                 <ShieldCheck size={14} />
-                <span>HACCP Verified</span>
+                <span>ISO 9001:2015</span>
               </span>
               <span className="comp-badge">
                 <Award size={14} />
-                <span>ISO 22000</span>
+                <span>GLOBALG.A.P. Certified</span>
               </span>
             </div>
           </div>
 
           {/* Col 2: Products */}
           <div className="footer-col">
-            <h4 className="footer-col-title">Product Portfolio</h4>
+            <h4 className="footer-col-title">Import & Export Divisions</h4>
             <ul className="footer-nav-list">
-              <li><Link to="/products">Yellowfin & Bigeye Tuna</Link></li>
-              <li><Link to="/products">Atlantic Salmon & Fillets</Link></li>
-              <li><Link to="/products">Black Tiger & Vannamei Prawns</Link></li>
-              <li><Link to="/products">Barents Sea Atlantic Cod</Link></li>
-              <li><Link to="/products">Giant Humboldt Squid</Link></li>
-              <li><Link to="/products">Pacific Pelagic Mackerel</Link></li>
-              <li><Link to="/products">Custom IQF Retail Packs</Link></li>
+              <li><Link to="/products">Commercial & Heavy OTR Tires</Link></li>
+              <li><Link to="/products">Automotive & Solar Batteries</Link></li>
+              <li><Link to="/products">Malabar & Zanzibar Spices</Link></li>
+              <li><Link to="/products">Kenya AA Washed Arabica Coffee</Link></li>
+              <li><Link to="/products">Humera White Sesame Seeds</Link></li>
+              <li><Link to="/products">Raw & Roasted Cashews / Nuts</Link></li>
+              <li><Link to="/products">Finished & Wet-Blue Leather</Link></li>
+              <li><Link to="/products">Fresh Horticultural Vegetables</Link></li>
             </ul>
           </div>
 
@@ -87,23 +88,23 @@ export default function Footer() {
           <div className="footer-col">
             <h4 className="footer-col-title">Operations & Network</h4>
             <ul className="footer-nav-list">
-              <li><Link to="/about">Corporate Profile & Mission</Link></li>
-              <li><Link to="/about">Analytical Quality Assurance</Link></li>
-              <li><Link to="/sourcing">Dockside Processing & IQF</Link></li>
-              <li><Link to="/sourcing">Cold-Chain Datalogging</Link></li>
-              <li><Link to="/network">Rotterdam Port Hub (Europe)</Link></li>
-              <li><Link to="/network">Singapore Gateway (Asia-Pac)</Link></li>
-              <li><Link to="/network">Seattle Reefer Depot (USA)</Link></li>
+              <li><Link to="/about">Corporate Profile & Trade Desk</Link></li>
+              <li><Link to="/about">Quality Assurance & Origin Labs</Link></li>
+              <li><Link to="/sourcing">Direct Farm & Factory Sourcing</Link></li>
+              <li><Link to="/sourcing">Containerized Cargo & Cold-Chain</Link></li>
+              <li><Link to="/network">East Africa Mombasa Gateway</Link></li>
+              <li><Link to="/network">Rotterdam Port Trade Depot</Link></li>
+              <li><Link to="/network">Dubai Free Zone Transshipment</Link></li>
             </ul>
           </div>
 
           {/* Col 4: Corporate Contact */}
           <div className="footer-col">
-            <h4 className="footer-col-title">Headquarters</h4>
+            <h4 className="footer-col-title">Commercial Desk</h4>
             <div className="footer-contact-info">
               <div className="f-contact-item">
                 <MapPin size={16} className="f-icon" />
-                <span>Havenkwartier 420, 3011 Rotterdam, The Netherlands</span>
+                <span>International Trade Center & Logistics Terminals</span>
               </div>
               <div className="f-contact-item">
                 <Phone size={16} className="f-icon" />
@@ -111,7 +112,7 @@ export default function Footer() {
               </div>
               <div className="f-contact-item">
                 <Mail size={16} className="f-icon" />
-                <span>trading@zfish-global.com</span>
+                <span>fishkenya11@gmail.com</span>
               </div>
             </div>
 

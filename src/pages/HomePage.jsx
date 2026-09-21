@@ -1,115 +1,71 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Hero from '../components/Hero';
-import { productsData } from '../components/ProductsSection';
+import ProductsSection from '../components/ProductsSection';
 import { 
   ArrowRight, 
   ShieldCheck, 
-  Snowflake, 
   Globe2, 
   Package, 
   Compass, 
   FileText,
   Ship,
-  CheckCircle2
+  CheckCircle2,
+  Award,
+  Layers,
+  Truck
 } from 'lucide-react';
 
 export default function HomePage() {
-  const featuredProducts = productsData.slice(0, 4);
+  const navigate = useNavigate();
+
+  const handleSelectProduct = (productName) => {
+    navigate(`/contact?product=${encodeURIComponent(productName)}`);
+  };
 
   return (
     <div className="home-page">
       {/* Hero Section */}
-      <Hero onOpenQuote={() => {}} />
+      <Hero onOpenQuote={() => navigate('/contact')} />
 
-      {/* Featured Products Showcase */}
-      <section className="home-section">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-subtitle">Commercial Portfolio</span>
-            <h2 className="section-title font-serif">Featured Seafood Exports</h2>
-            <p className="section-desc">
-              Explore our core product lines of wild-caught and sustainably farmed species, 
-              processed under strict international phytosanitary standards.
-            </p>
-          </div>
+      {/* Full Interactive Product Catalog with Dedicated Interfaces & Image-Matched Vegetables Showcase */}
+      <ProductsSection onSelectProductForQuote={handleSelectProduct} />
 
-          <div className="featured-grid">
-            {featuredProducts.map(product => (
-              <div key={product.id} className="featured-card">
-                <div className="featured-card-top">
-                  <span className="badge badge-gold">{product.grade.split('/')[0]}</span>
-                  <h3 className="featured-title">{product.name}</h3>
-                  <span className="featured-sci font-serif">{product.scientific}</span>
-                </div>
-
-                <p className="featured-desc">{product.description.slice(0, 120)}...</p>
-
-                <div className="featured-specs">
-                  <div className="f-spec-item">
-                    <Compass size={14} className="f-icon" />
-                    <span>{product.origin.split('&')[0]}</span>
-                  </div>
-                  <div className="f-spec-item">
-                    <Snowflake size={14} className="f-icon" />
-                    <span>{product.freezing.split('(')[0]}</span>
-                  </div>
-                </div>
-
-                <div className="featured-footer">
-                  <Link to={`/products`} className="btn btn-secondary featured-btn">
-                    <span>View Specifications</span>
-                    <ArrowRight size={15} />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="home-cta-center">
-            <Link to="/products" className="btn btn-primary">
-              <span>View All Products in Catalog</span>
-              <ArrowRight size={16} />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Operations & Supply Chain Teaser */}
+      {/* Operations & Supply Chain Section */}
       <section className="home-section operations-highlight">
         <div className="container">
           <div className="operations-grid">
             <div className="operations-content">
-              <span className="section-subtitle">Farm-to-Dock Integrity</span>
+              <span className="section-subtitle">Origin Sourcing & Cargo Precision</span>
               <h2 className="font-serif operations-title">
-                Unbroken Cold-Chain & Global Logistics Precision
+                Multi-Modal Freight Engineering & Strict Quality Assurance
               </h2>
               <p className="operations-p">
-                At Zfish, we safeguard quality through every phase of the international supply chain. 
-                From rapid dockside blast-freezing down to -40°C to continuous satellite-monitored 
-                reefer containers, we deliver ocean-fresh flavor and structural integrity to destination ports worldwide.
+                At Zfish, we manage end-to-end supply chain logistics across bilateral trade lanes. 
+                From containerized bulk lashing of heavy industrial tires and batteries to hermetic moisture-shielded 
+                shipments of specialty coffee, sesame seeds, cashew nuts, and 24-hour horticultural cold-chain air freight.
               </p>
 
               <div className="ops-features">
                 <div className="ops-feature-item">
                   <CheckCircle2 size={18} className="ops-check" />
                   <div>
-                    <strong>Dockside Blast-Freezing:</strong>
-                    <span>Same-day landing processing locks in natural moisture and amino acid structure.</span>
+                    <strong>Direct Origin & Factory Procurement:</strong>
+                    <span>Direct factory allocations for tires & batteries; farm-gate origin purchasing for agricultural crops.</span>
                   </div>
                 </div>
                 <div className="ops-feature-item">
                   <CheckCircle2 size={18} className="ops-check" />
                   <div>
-                    <strong>24/7 Datalogger Telemetry:</strong>
-                    <span>Real-time GPS and temperature tracking across all 40ft reefer consignments.</span>
+                    <strong>24/7 Datalogger & Telemetry Monitoring:</strong>
+                    <span>Real-time GPS and temperature/humidity datalogging across all high-cube containers and air consignments.</span>
                   </div>
                 </div>
                 <div className="ops-feature-item">
                   <CheckCircle2 size={18} className="ops-check" />
                   <div>
-                    <strong>Complete Lot-Level Traceability:</strong>
-                    <span>Every carton is coded with vessel ID, harvest date, and catch coordinates.</span>
+                    <strong>Independent Third-Party Verification:</strong>
+                    <span>Full SGS / Bureau Veritas inspection, Certificate of Analysis (COA), and Phytosanitary certification on every lot.</span>
                   </div>
                 </div>
               </div>
@@ -127,24 +83,24 @@ export default function HomePage() {
 
             <div className="operations-card-side">
               <div className="ops-stat-card">
-                <div className="ops-badge">QUALITY COMMITMENT</div>
+                <div className="ops-badge">COMPLIANCE & STANDARDS</div>
                 <h3 className="ops-stat-heading">Certified International Standards</h3>
                 <p className="ops-stat-text">
-                  All consignments comply with EU health directives, US FDA FSVP requirements, 
-                  and are accompanied by full veterinary inspection health certificates.
+                  All import and export consignments comply with relevant international directives, customs regulations, 
+                  and quality certification frameworks.
                 </p>
 
                 <div className="cert-mini-grid">
-                  <div className="cert-mini-item">HACCP Certified</div>
-                  <div className="cert-mini-item">ISO 22000:2018</div>
-                  <div className="cert-mini-item">EU Export Approved</div>
-                  <div className="cert-mini-item">US FDA Registered</div>
-                  <div className="cert-mini-item">MSC Chain of Custody</div>
-                  <div className="cert-mini-item">ASC Farm Sourced</div>
+                  <div className="cert-mini-item">ISO 9001:2015</div>
+                  <div className="cert-mini-item">GLOBALG.A.P.</div>
+                  <div className="cert-mini-item">DOT / ECE Certified</div>
+                  <div className="cert-mini-item">SCA Specialty Coffee</div>
+                  <div className="cert-mini-item">ASTA Spices Standard</div>
+                  <div className="cert-mini-item">CE & RoHS Batteries</div>
                 </div>
 
                 <div className="ops-card-footer">
-                  <Link to="/about" className="ops-link">Read our quality policy &rarr;</Link>
+                  <Link to="/about" className="ops-link">Read our trade & quality policy &rarr;</Link>
                 </div>
               </div>
             </div>
@@ -156,30 +112,30 @@ export default function HomePage() {
       <section className="home-section network-teaser">
         <div className="container">
           <div className="section-header">
-            <span className="section-subtitle">Worldwide Distribution</span>
-            <h2 className="section-title font-serif">Connecting 40+ Destination Ports</h2>
+            <span className="section-subtitle">International Gateways</span>
+            <h2 className="section-title font-serif">Connecting 45+ Destination Ports & Hubs</h2>
             <p className="section-desc">
-              With commercial trading offices and bonded deep-freeze hubs in Rotterdam, Singapore, 
-              Tokyo, Seattle, Dubai, and Guayaquil, we provide local support across all maritime corridors.
+              With commercial trading desks and logistics handling partners across key trade crossroads, 
+              we provide reliable FOB, CFR, CIF, and DDP delivery terms worldwide.
             </p>
           </div>
 
           <div className="network-teaser-grid">
             <div className="net-hub-box">
-              <span className="net-hub-city">Rotterdam, NL</span>
-              <span className="net-hub-role">European HQ & 35,000 Pallet Deep-Freeze</span>
+              <span className="net-hub-city">Mombasa & Nairobi (East Africa)</span>
+              <span className="net-hub-role">Origin Export Hub: Coffee, Sesame, Nuts, Vegetables & Leather</span>
             </div>
             <div className="net-hub-box">
-              <span className="net-hub-city">Singapore</span>
-              <span className="net-hub-role">Asia-Pacific Trading & Transshipment</span>
+              <span className="net-hub-city">Rotterdam (Europe)</span>
+              <span className="net-hub-role">European Trade Gateway & Bonded Warehousing Logistics</span>
             </div>
             <div className="net-hub-box">
-              <span className="net-hub-city">Tokyo, JP</span>
-              <span className="net-hub-role">Northeast Asia & Sashimi Quality Desk</span>
+              <span className="net-hub-city">Dubai (Middle East & GCC)</span>
+              <span className="net-hub-role">Regional Re-Export Transshipment & Distribution Center</span>
             </div>
             <div className="net-hub-box">
-              <span className="net-hub-city">Seattle / LA, USA</span>
-              <span className="net-hub-role">Americas Distribution & Bonded Reefer Depot</span>
+              <span className="net-hub-city">Singapore / Shanghai (Asia-Pac)</span>
+              <span className="net-hub-role">Industrial Tires, Batteries & Machinery Procurement Desk</span>
             </div>
           </div>
 
@@ -197,9 +153,9 @@ export default function HomePage() {
         <div className="container">
           <div className="cta-banner-inner">
             <div className="cta-banner-text">
-              <h2 className="cta-banner-title font-serif">Looking for a Reliable Seafood Import/Export Partner?</h2>
+              <h2 className="cta-banner-title font-serif">Looking for a Reliable Import & Export Partner?</h2>
               <p className="cta-banner-desc">
-                Contact our commercial desk today for current CIF/FOB spot rates, sample requests, or annual supply tenders.
+                Contact our commercial desk today for current CIF/FOB pricing, contract terms, technical spec sheets, or spot tenders.
               </p>
             </div>
             <div className="cta-banner-btn-wrap">
@@ -215,84 +171,6 @@ export default function HomePage() {
       <style>{`
         .home-section {
           padding: 80px 0;
-        }
-
-        .featured-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-          gap: 24px;
-          margin-bottom: 40px;
-        }
-
-        .featured-card {
-          background: #FFFFFF;
-          border: 1px solid var(--border-medium);
-          border-radius: var(--radius-md);
-          padding: 24px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          box-shadow: var(--shadow-sm);
-          transition: all 0.25s ease;
-        }
-
-        .featured-card:hover {
-          transform: translateY(-4px);
-          box-shadow: var(--shadow-md);
-          border-color: var(--accent-gold);
-        }
-
-        .featured-card-top {
-          margin-bottom: 12px;
-        }
-
-        .featured-title {
-          font-size: 1.25rem;
-          color: var(--accent-navy);
-          margin-top: 8px;
-        }
-
-        .featured-sci {
-          font-size: 0.82rem;
-          font-style: italic;
-          color: var(--accent-gold);
-          display: block;
-        }
-
-        .featured-desc {
-          font-size: 0.88rem;
-          color: var(--text-muted);
-          line-height: 1.5;
-          margin-bottom: 16px;
-        }
-
-        .featured-specs {
-          display: flex;
-          flex-direction: column;
-          gap: 6px;
-          padding: 12px 0;
-          border-top: 1px solid var(--border-subtle);
-          border-bottom: 1px solid var(--border-subtle);
-          margin-bottom: 16px;
-        }
-
-        .f-spec-item {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          font-size: 0.8rem;
-          color: var(--text-main);
-          font-weight: 500;
-        }
-
-        .f-icon {
-          color: var(--accent-gold);
-        }
-
-        .featured-btn {
-          width: 100%;
-          padding: 8px;
-          font-size: 0.82rem;
         }
 
         .home-cta-center {
@@ -446,7 +324,7 @@ export default function HomePage() {
         }
 
         .net-hub-city {
-          font-size: 1.1rem;
+          font-size: 1.05rem;
           font-weight: 700;
           color: var(--accent-navy);
         }

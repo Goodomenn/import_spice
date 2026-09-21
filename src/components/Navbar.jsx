@@ -48,7 +48,7 @@ export default function Navbar({ onSearchClick }) {
           <div className="top-bar-right">
             <span className="top-item">
               <Mail size={14} className="top-icon" />
-              <span>exports@zfish-global.com</span>
+              <span>fishkenya11@gmail.com</span>
             </span>
             <span className="top-divider">|</span>
             <div className="lang-picker">

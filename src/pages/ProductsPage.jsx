@@ -20,10 +20,10 @@ export default function ProductsPage() {
             <span className="crumb-sep">/</span>
             <span className="crumb-current">Products</span>
           </div>
-          <h1 className="page-title font-serif">Commercial Product Catalog</h1>
+          <h1 className="page-title font-serif">Global Import & Export Catalog</h1>
           <p className="page-lead">
-            Certified wild-caught and sustainably farmed seafood ingredients for food manufacturers, 
-            supermarket chains, and international wholesale distributors.
+            High-specification industrial imports (tires, batteries, spices) alongside export-grade agricultural commodities 
+            (specialty coffee, sesame seeds, cashew & macadamia nuts, leather, and fresh farm-grown vegetables).
           </p>
         </div>
       </div>
@@ -35,11 +35,11 @@ export default function ProductsPage() {
       <section className="packaging-standards-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-subtitle">Packaging & Cold-Chain Standards</span>
-            <h2 className="section-title font-serif">Export Packaging Engineered for Sea & Air Freight</h2>
+            <span className="section-subtitle">Packaging & Logistics Standards</span>
+            <h2 className="section-title font-serif">Cargo Engineering for Multi-Modal Freight</h2>
             <p className="section-desc">
-              All packaging materials are food-grade certified, designed to withstand rigorous maritime 
-              transit and prevent freezer burn during international ocean voyages.
+              All consignments are packed according to international maritime and aviation standards to guarantee zero transit damage, 
+              moisture defense, and preservation of quality attributes.
             </p>
           </div>
 
@@ -48,10 +48,10 @@ export default function ProductsPage() {
               <div className="standard-icon-wrap">
                 <Package size={24} />
               </div>
-              <h3 className="standard-title">Industrial Master Cartons</h3>
+              <h3 className="standard-title">Industrial Containerization</h3>
               <p className="standard-desc">
-                Heavy-duty 5-ply corrugated cartons (10kg, 15kg, 20kg, 25kg) with poly-liner bag protection. 
-                Reinforced corners ensure multi-pallet stacking without crushing during container loading.
+                20ft & 40ft High Cube container loads with heavy-duty dunnage and cargo lashing for tires and heavy batteries. 
+                Palletized with heat-treated ISPM-15 wooden pallets and reinforced strapping.
               </p>
             </div>
 
@@ -59,10 +59,10 @@ export default function ProductsPage() {
               <div className="standard-icon-wrap">
                 <ShieldCheck size={24} />
               </div>
-              <h3 className="standard-title">Retail Ready & Private Label</h3>
+              <h3 className="standard-title">Hermetic & Barrier Packaging</h3>
               <p className="standard-desc">
-                High-barrier vacuum pouches (IVP), printed pillow bags, and skin-packs for retail shelves. 
-                Full support for bilingual labeling, barcodes, and private label brand identity.
+                Specialty green coffee and nuts sealed in GrainPro moisture-barrier liners and nitrogen-flushed foil packs. 
+                Protects coffee cupping scores and prevents lipid oxidation in raw nuts.
               </p>
             </div>
 
@@ -70,10 +70,10 @@ export default function ProductsPage() {
               <div className="standard-icon-wrap">
                 <Thermometer size={24} />
               </div>
-              <h3 className="standard-title">Precision Glaze Calibration</h3>
+              <h3 className="standard-title">Fresh Produce Cold-Chain Air Bridge</h3>
               <p className="standard-desc">
-                Protective water glazing calibrated from 0% (natural glaze-free) up to 15% strictly per contract. 
-                Every invoice clearly states net drained weight with third-party inspection verification.
+                Horticultural fresh vegetables and avocados pre-cooled to 2°C–4°C and shipped in ventilated Euro-cartons. 
+                Monitored with continuous USB and real-time cellular dataloggers dock-to-dock.
               </p>
             </div>
           </div>
@@ -81,13 +81,13 @@ export default function ProductsPage() {
           <div className="catalog-bottom-cta">
             <div className="bottom-cta-inner">
               <div>
-                <h3 className="bottom-cta-title font-serif">Need a Specific Species, Cut, or Volume?</h3>
+                <h3 className="bottom-cta-title font-serif">Need a Custom Commodity, Specification, or Volume?</h3>
                 <p className="bottom-cta-desc">
-                  Our sourcing team regularly procures custom species and custom trims outside our standard catalog.
+                  Our international trade desk procures tailored volumes, custom private labeling, and specific origin lots upon request.
                 </p>
               </div>
               <Link to="/contact" className="btn btn-primary">
-                <span>Inquire Custom Sourcing</span>
+                <span>Inquire Custom Procurement</span>
                 <ArrowRight size={16} />
               </Link>
             </div>

@@ -9,9 +9,10 @@ export default function SearchModal({ isOpen, onClose, onSelectProduct }) {
 
   const results = productsData.filter(p => 
     p.name.toLowerCase().includes(query.toLowerCase()) ||
-    p.scientific.toLowerCase().includes(query.toLowerCase()) ||
-    p.origin.toLowerCase().includes(query.toLowerCase()) ||
-    p.format.toLowerCase().includes(query.toLowerCase())
+    (p.subtitle && p.subtitle.toLowerCase().includes(query.toLowerCase())) ||
+    p.category.toLowerCase().includes(query.toLowerCase()) ||
+    p.division.toLowerCase().includes(query.toLowerCase()) ||
+    (p.specs?.origin && p.specs.origin.toLowerCase().includes(query.toLowerCase()))
   );
 
   return (
@@ -22,7 +23,7 @@ export default function SearchModal({ isOpen, onClose, onSelectProduct }) {
           <input 
             type="text"
             autoFocus
-            placeholder="Type species, product name, FAO catch area, or format..."
+            placeholder="Type tires, batteries, spices, coffee, sesame, nuts, leather, vegetables..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             className="modal-search-input"
@@ -35,9 +36,18 @@ export default function SearchModal({ isOpen, onClose, onSelectProduct }) {
         <div className="search-modal-results">
           {query.trim() === '' ? (
             <div className="quick-suggestions">
-              <span className="sugg-title">Popular Export Species & Searches:</span>
+              <span className="sugg-title">Popular Import & Export Searches:</span>
               <div className="sugg-tags">
-                {['Yellowfin Tuna', 'Atlantic Salmon', 'Black Tiger Prawns', 'Atlantic Cod', 'Humboldt Squid', 'IQF Fillets'].map((tag, idx) => (
+                {[
+                  'Heavy Truck Tires', 
+                  'Solar Tubular Batteries', 
+                  'Tellicherry Black Pepper', 
+                  'Kenya AA Coffee', 
+                  'Humera White Sesame', 
+                  'Roasted Cashews', 
+                  'Full-Grain Leather', 
+                  'French Green Beans'
+                ].map((tag, idx) => (
                   <button 
                     key={idx} 
                     className="sugg-btn"
@@ -62,9 +72,14 @@ export default function SearchModal({ isOpen, onClose, onSelectProduct }) {
                   }}
                 >
                   <div className="result-info">
-                    <strong className="result-name">{prod.name}</strong>
-                    <span className="result-sci font-serif">{prod.scientific}</span>
-                    <span className="result-origin">{prod.origin}</span>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <strong className="result-name">{prod.name}</strong>
+                      <span className={`badge ${prod.division === 'import' ? 'badge-import' : 'badge-export'}`} style={{ fontSize: '0.68rem', padding: '2px 8px' }}>
+                        {prod.division.toUpperCase()}
+                      </span>
+                    </div>
+                    <span className="result-sci font-serif">{prod.subtitle}</span>
+                    <span className="result-origin">{prod.specs?.origin}</span>
                   </div>
                   <button className="result-btn">
                     <span>RFQ</span>
@@ -75,7 +90,7 @@ export default function SearchModal({ isOpen, onClose, onSelectProduct }) {
             </div>
           ) : (
             <div className="no-search-results">
-              <p>No products found for "{query}". Try a different species or FAO zone.</p>
+              <p>No products found for "{query}". Try a different commodity or specification.</p>
             </div>
           )}
         </div>
