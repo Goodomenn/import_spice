@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Hero from '../components/Hero';
-import ProductsSection from '../components/ProductsSection';
 import { 
   ArrowRight, 
   ShieldCheck, 
@@ -13,23 +12,171 @@ import {
   CheckCircle2,
   Award,
   Layers,
-  Truck
+  ArrowDownLeft,
+  ArrowUpRight,
+  CircleDot,
+  BatteryCharging,
+  Sparkles,
+  Briefcase,
+  Coffee,
+  Wheat,
+  Nut,
+  Sprout
 } from 'lucide-react';
 
 export default function HomePage() {
   const navigate = useNavigate();
-
-  const handleSelectProduct = (productName) => {
-    navigate(`/contact?product=${encodeURIComponent(productName)}`);
-  };
 
   return (
     <div className="home-page">
       {/* Hero Section */}
       <Hero onOpenQuote={() => navigate('/contact')} />
 
-      {/* Full Interactive Product Catalog with Dedicated Interfaces & Image-Matched Vegetables Showcase */}
-      <ProductsSection onSelectProductForQuote={handleSelectProduct} />
+      {/* Trade Divisions Overview & Catalog Gateway */}
+      <section className="home-section divisions-gateway-section">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-subtitle">Commercial Trade Divisions</span>
+            <h2 className="section-title font-serif">Two Core Trading Divisions, One Global Standard</h2>
+            <p className="section-desc">
+              Zfish bridges international industrial procurement with certified agricultural commodity exports, 
+              providing unbroken origin traceability and tailored Incoterms 2020 delivery solutions.
+            </p>
+          </div>
+
+          <div className="divisions-overview-grid">
+            {/* Import Division Card */}
+            <div className="division-overview-card import-card">
+              <div className="div-card-header">
+                <div className="div-badge-wrap">
+                  <span className="div-pill-badge import-pill">
+                    <ArrowDownLeft size={14} />
+                    IMPORT DIVISION
+                  </span>
+                  <span className="div-items-count">10 Commodities</span>
+                </div>
+                <h3 className="div-card-title font-serif">Industrial & Culinary Imports</h3>
+                <p className="div-card-desc">
+                  Procured directly from Tier-1 manufacturing hubs and historic spice estates for domestic and regional industrial supply.
+                </p>
+              </div>
+
+              <div className="div-categories-list">
+                <div className="div-category-row">
+                  <div className="div-cat-icon-wrap import-icon">
+                    <CircleDot size={18} />
+                  </div>
+                  <div className="div-cat-info">
+                    <strong>Commercial & OTR Tires</strong>
+                    <span>Heavy-duty truck radials (TBR 315/80R22.5), passenger PCR, and earthmover tires.</span>
+                  </div>
+                </div>
+
+                <div className="div-category-row">
+                  <div className="div-cat-icon-wrap import-icon">
+                    <BatteryCharging size={18} />
+                  </div>
+                  <div className="div-cat-info">
+                    <strong>Automotive & Solar Batteries</strong>
+                    <span>Maintenance-free SMF calcium batteries, deep-cycle solar tubular, and telecom backup cells.</span>
+                  </div>
+                </div>
+
+                <div className="div-category-row">
+                  <div className="div-cat-icon-wrap import-icon">
+                    <Sparkles size={18} />
+                  </div>
+                  <div className="div-cat-info">
+                    <strong>Premium Whole Spices</strong>
+                    <span>Tellicherry black pepper, bold cardamom, Zanzibar cloves, and Ceylon true cinnamon.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="div-card-footer">
+                <Link to="/products" className="btn btn-primary div-btn">
+                  <span>Explore Import Catalog</span>
+                  <ArrowRight size={16} />
+                </Link>
+              </div>
+            </div>
+
+            {/* Export Division Card */}
+            <div className="division-overview-card export-card">
+              <div className="div-card-header">
+                <div className="div-badge-wrap">
+                  <span className="div-pill-badge export-pill">
+                    <ArrowUpRight size={14} />
+                    EXPORT DIVISION
+                  </span>
+                  <span className="div-items-count">18 Commodities</span>
+                </div>
+                <h3 className="div-card-title font-serif">Agricultural & Material Exports</h3>
+                <p className="div-card-desc">
+                  Grown and harvested in fertile East African highland soils and pastoral rangelands, certified for global export.
+                </p>
+              </div>
+
+              <div className="div-categories-list">
+                <div className="div-category-row">
+                  <div className="div-cat-icon-wrap export-icon">
+                    <Coffee size={18} />
+                  </div>
+                  <div className="div-cat-info">
+                    <strong>Specialty Coffee</strong>
+                    <span>Washed Kenya AA Arabica, Ethiopian Yirgacheffe Grade 1, and highland peaberry.</span>
+                  </div>
+                </div>
+
+                <div className="div-category-row">
+                  <div className="div-cat-icon-wrap export-icon">
+                    <Wheat size={18} />
+                  </div>
+                  <div className="div-cat-info">
+                    <strong>Sesame Seeds & Nuts</strong>
+                    <span>99.9% Humera white sesame, raw cashew nuts in shell, jumbo roasted cashews & macadamia.</span>
+                  </div>
+                </div>
+
+                <div className="div-category-row">
+                  <div className="div-cat-icon-wrap export-icon">
+                    <Briefcase size={18} />
+                  </div>
+                  <div className="div-cat-info">
+                    <strong>Leather Products</strong>
+                    <span>Finished full-grain bovine sides, machine-flayed wet-blue hides, and crust leather.</span>
+                  </div>
+                </div>
+
+                <div className="div-category-row">
+                  <div className="div-cat-icon-wrap export-icon">
+                    <Sprout size={18} />
+                  </div>
+                  <div className="div-cat-info">
+                    <strong>Fresh Horticultural Produce</strong>
+                    <span>Hand-picked French beans, crisp snow peas, Hass avocados, baby leeks, and herbs.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="div-card-footer">
+                <Link to="/products" className="btn btn-primary div-btn">
+                  <span>Explore Export Catalog</span>
+                  <ArrowRight size={16} />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="divisions-cta-center">
+            <Link to="/products" className="btn btn-gold full-catalog-btn">
+              <Layers size={18} />
+              <span>Explore Complete Product Catalog & Technical Specs (28 Items)</span>
+              <ArrowRight size={18} />
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Operations & Supply Chain Section */}
       <section className="home-section operations-highlight">
@@ -176,6 +323,163 @@ export default function HomePage() {
         .home-cta-center {
           text-align: center;
           margin-top: 24px;
+        }
+
+        /* Divisions Gateway Section */
+        .divisions-gateway-section {
+          background: #FAF7F2;
+        }
+
+        .divisions-overview-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 32px;
+          margin-bottom: 40px;
+        }
+
+        .division-overview-card {
+          background: #FFFFFF;
+          border: 1px solid var(--border-medium);
+          border-radius: var(--radius-lg);
+          padding: 36px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          box-shadow: var(--shadow-sm);
+          transition: all 0.3s ease;
+        }
+
+        .division-overview-card:hover {
+          transform: translateY(-4px);
+          box-shadow: var(--shadow-md);
+        }
+
+        .import-card:hover {
+          border-color: #0284C7;
+        }
+
+        .export-card:hover {
+          border-color: #16A34A;
+        }
+
+        .div-card-header {
+          margin-bottom: 24px;
+        }
+
+        .div-badge-wrap {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 12px;
+        }
+
+        .div-pill-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          padding: 5px 12px;
+          border-radius: var(--radius-full);
+          font-size: 0.72rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+        }
+
+        .import-pill {
+          background: #E0F2FE;
+          color: #0369A1;
+          border: 1px solid rgba(2, 132, 199, 0.25);
+        }
+
+        .export-pill {
+          background: #DCFCE7;
+          color: #15803D;
+          border: 1px solid rgba(22, 163, 74, 0.25);
+        }
+
+        .div-items-count {
+          font-size: 0.78rem;
+          font-weight: 600;
+          color: var(--text-light);
+        }
+
+        .div-card-title {
+          font-size: 1.7rem;
+          color: var(--accent-navy);
+          margin-bottom: 8px;
+        }
+
+        .div-card-desc {
+          font-size: 0.92rem;
+          color: var(--text-muted);
+          line-height: 1.55;
+        }
+
+        .div-categories-list {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          padding: 20px 0;
+          border-top: 1px solid var(--border-subtle);
+          border-bottom: 1px solid var(--border-subtle);
+          margin-bottom: 24px;
+        }
+
+        .div-category-row {
+          display: flex;
+          align-items: flex-start;
+          gap: 14px;
+        }
+
+        .div-cat-icon-wrap {
+          width: 36px;
+          height: 36px;
+          border-radius: var(--radius-sm);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+
+        .div-cat-icon-wrap.import-icon {
+          background: #E0F2FE;
+          color: #0284C7;
+        }
+
+        .div-cat-icon-wrap.export-icon {
+          background: #DCFCE7;
+          color: #16A34A;
+        }
+
+        .div-cat-info {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .div-cat-info strong {
+          font-size: 0.95rem;
+          color: var(--text-main);
+          margin-bottom: 2px;
+        }
+
+        .div-cat-info span {
+          font-size: 0.82rem;
+          color: var(--text-muted);
+          line-height: 1.4;
+        }
+
+        .div-btn {
+          width: 100%;
+          padding: 12px;
+        }
+
+        .divisions-cta-center {
+          text-align: center;
+        }
+
+        .full-catalog-btn {
+          padding: 16px 36px;
+          font-size: 1.05rem;
+          box-shadow: 0 6px 20px rgba(182, 134, 56, 0.25);
         }
 
         /* Operations Section */
@@ -368,6 +672,10 @@ export default function HomePage() {
         }
 
         @media (max-width: 960px) {
+          .divisions-overview-grid {
+            grid-template-columns: 1fr;
+          }
+
           .operations-grid {
             grid-template-columns: 1fr;
           }
@@ -385,6 +693,12 @@ export default function HomePage() {
           .cta-banner-inner {
             flex-direction: column;
             align-items: flex-start;
+          }
+
+          .full-catalog-btn {
+            font-size: 0.95rem;
+            padding: 14px 20px;
+            width: 100%;
           }
         }
       `}</style>

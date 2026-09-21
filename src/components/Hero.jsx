@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, FileCheck, Shield, Globe2, Snowflake, Award } from 'lucide-react';
 
 export default function Hero({ onOpenQuote }) {
@@ -24,10 +25,10 @@ export default function Hero({ onOpenQuote }) {
           </p>
 
           <div className="hero-actions">
-            <a href="#products" className="btn btn-primary hero-btn">
+            <Link to="/products" className="btn btn-primary hero-btn">
               <span>Explore Products</span>
               <ArrowRight size={18} />
-            </a>
+            </Link>
             <button onClick={onOpenQuote} className="btn btn-secondary hero-btn">
               <FileCheck size={18} />
               <span>Request Specifications & RFQ</span>
@@ -100,37 +101,10 @@ export default function Hero({ onOpenQuote }) {
         </div>
       </div>
 
-      {/* Metrics Strip */}
-      <div className="metrics-strip">
-        <div className="container">
-          <div className="metrics-grid">
-            <div className="metric-item">
-              <span className="metric-number">65,000<span className="metric-plus">+</span></span>
-              <span className="metric-label">Metric Tons Traded Annually</span>
-            </div>
-            <div className="metric-divider"></div>
-            <div className="metric-item">
-              <span className="metric-number">45<span className="metric-plus">+</span></span>
-              <span className="metric-label">Destination Port Countries</span>
-            </div>
-            <div className="metric-divider"></div>
-            <div className="metric-item">
-              <span className="metric-number">100<span className="metric-plus">%</span></span>
-              <span className="metric-label">Origin Quality & Lab Inspection</span>
-            </div>
-            <div className="metric-divider"></div>
-            <div className="metric-item">
-              <span className="metric-number">&lt; 24h</span>
-              <span className="metric-label">Quotation & Spec Sheet Turnaround</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <style>{`
         .hero-section {
           position: relative;
-          padding: 64px 0 0;
+          padding: 64px 0 64px;
           overflow: hidden;
         }
 
@@ -139,7 +113,7 @@ export default function Hero({ onOpenQuote }) {
           grid-template-columns: 1.15fr 0.85fr;
           gap: 56px;
           align-items: center;
-          margin-bottom: 72px;
+          margin-bottom: 0;
         }
 
         .hero-badge {
