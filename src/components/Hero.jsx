@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, FileCheck, Shield, Globe2, Snowflake, Award } from 'lucide-react';
+import { ArrowRight, FileCheck, Shield } from 'lucide-react';
 
 export default function Hero({ onOpenQuote }) {
   return (
@@ -18,7 +18,7 @@ export default function Hero({ onOpenQuote }) {
           </h1>
 
           <p className="hero-description">
-            Zfish is an international trading and logistics powerhouse supplying heavy-duty tires, 
+            FF International is an international trading and logistics powerhouse supplying heavy-duty tires, 
             automotive batteries, and aromatic spices for import, while exporting prime leather products, 
             world-renowned specialty coffee, pure sesame seeds, nutrient-dense nuts, and fresh farm-grown vegetables. 
             Backed by origin verification, quality standards, and seamless global freight operations.
@@ -33,22 +33,6 @@ export default function Hero({ onOpenQuote }) {
               <FileCheck size={18} />
               <span>Request Specifications & RFQ</span>
             </button>
-          </div>
-
-          {/* Trust Badges */}
-          <div className="hero-trust">
-            <div className="trust-item">
-              <Award size={16} className="trust-icon" />
-              <span>ISO 9001 & GlobalGAP Certified</span>
-            </div>
-            <div className="trust-item">
-              <Globe2 size={16} className="trust-icon" />
-              <span>Direct Origin Procurement</span>
-            </div>
-            <div className="trust-item">
-              <Globe2 size={16} className="trust-icon" />
-              <span>Incoterms 2020: CIF / CFR / FOB</span>
-            </div>
           </div>
         </div>
 
@@ -87,14 +71,6 @@ export default function Hero({ onOpenQuote }) {
                   </div>
                   <span className="corridor-route">NBO / AMS / DXB</span>
                 </div>
-              </div>
-
-              <div className="visual-footer">
-                <span className="status-indicator">
-                  <span className="pulse-dot"></span>
-                  Bilateral trade logistics active
-                </span>
-                <a href="#network" className="visual-link">View freight network &rarr;</a>
               </div>
             </div>
           </div>

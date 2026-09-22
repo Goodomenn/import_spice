@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Anchor, 
   Mail, 
   Phone, 
   MapPin, 
@@ -42,14 +41,12 @@ export default function Footer() {
         <div className="footer-grid">
           {/* Col 1: Brand info */}
           <div className="footer-col brand-col">
-            <Link to="/" className="footer-logo">
-              <div className="logo-icon-wrap">
-                <Anchor className="logo-icon" size={20} />
-              </div>
-              <div className="logo-text">
-                <span className="brand-name">ZFISH</span>
-                <span className="brand-tagline">GLOBAL IMPORT & EXPORT</span>
-              </div>
+            <Link to="/" className="footer-logo" title="FF International Import & Export Services">
+              <img 
+                src="/logo.png" 
+                alt="FF International Import & Export Services" 
+                className="footer-logo-img" 
+              />
             </Link>
 
             <p className="footer-bio">
@@ -193,37 +190,16 @@ export default function Footer() {
         .footer-logo {
           display: flex;
           align-items: center;
-          gap: 10px;
           margin-bottom: 16px;
           text-decoration: none;
+          line-height: 0;
         }
 
-        .footer-logo .logo-icon-wrap {
-          width: 38px;
-          height: 38px;
-          background: var(--accent-navy);
-          color: #FFFFFF;
-          border-radius: 6px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .footer-logo .brand-name {
-          font-size: 1.3rem;
-          font-weight: 800;
-          color: var(--accent-navy);
-          letter-spacing: 0.06em;
-          line-height: 1;
-        }
-
-        .footer-logo .brand-tagline {
-          font-size: 0.6rem;
-          font-weight: 700;
-          letter-spacing: 0.12em;
-          color: var(--accent-gold);
-          display: block;
-          margin-top: 2px;
+        .footer-logo-img {
+          height: 44px;
+          max-width: 190px;
+          width: auto;
+          object-fit: contain;
         }
 
         .footer-bio {

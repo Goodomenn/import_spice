@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { 
-  Anchor, 
   Search, 
   Phone, 
   Mail, 
@@ -63,14 +62,12 @@ export default function Navbar({ onSearchClick }) {
       <nav className="main-nav">
         <div className="container nav-inner">
           {/* Brand Logo */}
-          <Link to="/" className="brand-logo">
-            <div className="logo-icon-wrap">
-              <Anchor className="logo-icon" size={24} />
-            </div>
-            <div className="logo-text">
-              <span className="brand-name">ZFISH</span>
-              <span className="brand-tagline">GLOBAL IMPORT & EXPORT</span>
-            </div>
+          <Link to="/" className="brand-logo" title="FF International Import & Export Services">
+            <img 
+              src="/logo.png" 
+              alt="FF International Import & Export Services" 
+              className="brand-logo-img" 
+            />
           </Link>
 
           {/* Desktop Nav Links */}
@@ -240,42 +237,20 @@ export default function Navbar({ onSearchClick }) {
         .brand-logo {
           display: flex;
           align-items: center;
-          gap: 12px;
           text-decoration: none;
-          color: var(--text-main);
+          line-height: 0;
         }
 
-        .logo-icon-wrap {
-          width: 44px;
-          height: 44px;
-          background: linear-gradient(135deg, var(--accent-navy), #1A5478);
-          color: #FFF;
-          border-radius: 8px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          box-shadow: 0 3px 10px rgba(14, 58, 83, 0.25);
+        .brand-logo-img {
+          height: 48px;
+          max-width: 200px;
+          width: auto;
+          object-fit: contain;
+          transition: transform 0.2s ease;
         }
 
-        .logo-text {
-          display: flex;
-          flex-direction: column;
-        }
-
-        .brand-name {
-          font-size: 1.45rem;
-          font-weight: 800;
-          letter-spacing: 0.06em;
-          color: var(--accent-navy);
-          line-height: 1;
-        }
-
-        .brand-tagline {
-          font-size: 0.65rem;
-          font-weight: 700;
-          letter-spacing: 0.14em;
-          color: var(--accent-gold);
-          margin-top: 3px;
+        .brand-logo:hover .brand-logo-img {
+          transform: scale(1.03);
         }
 
         .nav-links {

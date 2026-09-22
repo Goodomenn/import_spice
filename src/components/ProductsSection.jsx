@@ -26,29 +26,56 @@ import { productsData, categoriesMeta } from '../data/productsData';
 export { productsData, categoriesMeta };
 
 // 3D Pedestal Artwork Renderer for all 8 commodity categories
-function PedestalArt({ category, index }) {
+function PedestalArt({ category, index, productId }) {
+  // Real Photography for Tires
+  if (productId === 'tbr-truck-tires') {
+    return (
+      <div className="pedestal-photo-wrapper">
+        <img 
+          src="/tbr-truck-tire.png" 
+          alt="Heavy-Duty Truck Radials (TBR 315/80R22.5)" 
+          className="pedestal-item-photo"
+          loading="lazy"
+        />
+      </div>
+    );
+  }
+  if (productId === 'pcr-passenger-tires') {
+    return (
+      <div className="pedestal-photo-wrapper">
+        <img 
+          src="/pcr-passenger-tire.png" 
+          alt="Passenger Car Radial Tires (PCR High Performance)" 
+          className="pedestal-item-photo"
+          loading="lazy"
+        />
+      </div>
+    );
+  }
+  if (productId === 'otr-agricultural-tires') {
+    return (
+      <div className="pedestal-photo-wrapper">
+        <img 
+          src="/otr-agricultural-tire.png" 
+          alt="Agricultural & Off-The-Road (OTR / Earthmover)" 
+          className="pedestal-item-photo"
+          loading="lazy"
+        />
+      </div>
+    );
+  }
+
   switch (category) {
     case 'tires':
       return (
-        <svg className="pedestal-item-svg" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="80" cy="136" rx="46" ry="9" fill="rgba(0,0,0,0.55)" filter="blur(3px)" />
-          {/* Outer tire body */}
-          <ellipse cx="80" cy="82" rx="44" ry="52" fill="#1C2024" stroke="#374151" strokeWidth="2.5" />
-          <ellipse cx="80" cy="82" rx="35" ry="43" fill="#111417" />
-          {/* Tread notches / ribs */}
-          <path d="M50 42 L42 44 M48 58 L38 61 M48 76 L38 78 M48 94 L38 95 M50 110 L42 109 M110 42 L118 44 M112 58 L122 61 M112 76 L122 78 M112 94 L122 95 M110 110 L118 109" stroke="#4B5563" strokeWidth="3" strokeLinecap="round" />
-          {/* Inner alloy rim */}
-          <circle cx="80" cy="82" r="25" fill="#374151" stroke="#6B7280" strokeWidth="2" />
-          <circle cx="80" cy="82" r="14" fill="#1F2937" />
-          {/* Rim spokes */}
-          <path d="M80 59 L80 105 M57 82 L103 82 M64 66 L96 98 M64 98 L96 66" stroke="#9CA3AF" strokeWidth="3" strokeLinecap="round" />
-          <circle cx="80" cy="82" r="6" fill="#111827" stroke="#D1D5DB" strokeWidth="1.5" />
-          {/* Lug nuts */}
-          <circle cx="75" cy="77" r="1.5" fill="#E5E7EB" />
-          <circle cx="85" cy="77" r="1.5" fill="#E5E7EB" />
-          <circle cx="75" cy="87" r="1.5" fill="#E5E7EB" />
-          <circle cx="85" cy="87" r="1.5" fill="#E5E7EB" />
-        </svg>
+        <div className="pedestal-photo-wrapper">
+          <img 
+            src="/tbr-truck-tire.png" 
+            alt="Tire Product" 
+            className="pedestal-item-photo"
+            loading="lazy"
+          />
+        </div>
       );
 
     case 'batteries':
@@ -533,7 +560,7 @@ export default function ProductsSection({ onSelectProductForQuote, initialCatego
 
                   {/* Artwork Sitting On Pedestal */}
                   <div className="pedestal-item-container">
-                    <PedestalArt category={prod.category} index={idx} />
+                    <PedestalArt category={prod.category} index={idx} productId={prod.id} />
                   </div>
 
                   {/* 3D Cylindrical Pedestal */}
@@ -562,9 +589,9 @@ export default function ProductsSection({ onSelectProductForQuote, initialCatego
                     <div className="p-metric">
                       <span className="p-lbl">Key Spec</span>
                       <span className="p-val" title={prod.specs?.size || prod.specs?.voltageCapacity || prod.specs?.grade || prod.specs?.purity || 'Certified Standard'}>
-                        {prod.specs?.size?.split('(')[0] || 
-                         prod.specs?.voltageCapacity?.split('(')[0] || 
-                         prod.specs?.grade?.split('/')[0] || 
+                        {prod.specs?.size?.split(',')[0]?.split('(')[0]?.trim() || 
+                         prod.specs?.voltageCapacity?.split('(')[0]?.trim() || 
+                         prod.specs?.grade?.split('/')[0]?.trim() || 
                          prod.specs?.purity || 
                          'Certified'}
                       </span>
@@ -573,14 +600,14 @@ export default function ProductsSection({ onSelectProductForQuote, initialCatego
                     <div className="p-metric">
                       <span className="p-lbl">Origin</span>
                       <span className="p-val" title={prod.specs?.origin}>
-                        {prod.specs?.origin?.split('/')[0]?.split('(')[0] || 'Direct Origin'}
+                        {prod.specs?.origin?.split('/')[0]?.split('(')[0]?.trim() || 'Direct Origin'}
                       </span>
                     </div>
 
                     <div className="p-metric">
                       <span className="p-lbl">Packaging</span>
                       <span className="p-val" title={prod.packaging}>
-                        {prod.packaging?.split('(')[0]?.slice(0, 18) || 'Containerized'}
+                        {prod.packaging?.split('(')[0]?.split(',')[0]?.trim() || 'Containerized'}
                       </span>
                     </div>
                   </div>
@@ -1081,6 +1108,31 @@ export default function ProductsSection({ onSelectProductForQuote, initialCatego
           filter: drop-shadow(0 14px 18px rgba(0, 10, 5, 0.7));
         }
 
+        .pedestal-photo-wrapper {
+          width: 150px;
+          height: 150px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+        }
+
+        .pedestal-item-photo {
+          max-width: 145px;
+          max-height: 145px;
+          width: auto;
+          height: auto;
+          object-fit: contain;
+          filter: drop-shadow(0 16px 20px rgba(0, 5, 10, 0.85)) drop-shadow(0 4px 10px rgba(56, 189, 248, 0.25));
+          transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+          transform-origin: bottom center;
+        }
+
+        .pedestal-card:hover .pedestal-item-photo {
+          transform: scale(1.08) translateY(-4px);
+          filter: drop-shadow(0 20px 24px rgba(0, 5, 10, 0.95)) drop-shadow(0 6px 14px rgba(56, 189, 248, 0.35));
+        }
+
         /* 3D Cylindrical Pedestal / Plinth */
         .pedestal-cylinder {
           position: relative;
@@ -1150,34 +1202,45 @@ export default function ProductsSection({ onSelectProductForQuote, initialCatego
 
         .pedestal-metrics-strip {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(3, minmax(0, 1fr));
           gap: 6px;
-          padding: 10px 8px;
-          background: rgba(0, 0, 0, 0.3);
-          border: 1px solid rgba(255, 255, 255, 0.06);
+          padding: 10px 10px;
+          background: rgba(0, 0, 0, 0.35);
+          border: 1px solid rgba(255, 255, 255, 0.08);
           border-radius: 12px;
           margin-bottom: 16px;
+          width: 100%;
+          box-sizing: border-box;
+          overflow: hidden;
         }
 
         .p-metric {
           display: flex;
           flex-direction: column;
+          min-width: 0;
+          overflow: hidden;
         }
 
         .p-lbl {
-          font-size: 0.65rem;
+          font-size: 0.64rem;
           text-transform: uppercase;
           color: #94A3B8;
           letter-spacing: 0.04em;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: block;
         }
 
         .p-val {
-          font-size: 0.76rem;
+          font-size: 0.74rem;
           color: #F8FAFC;
           font-weight: 600;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
+          display: block;
+          width: 100%;
         }
 
         .pedestal-card-actions {
