@@ -58,51 +58,23 @@ export default function ContactSection({ prefilledProduct }) {
         <div className="contact-layout">
           {/* Left Column: Direct Inquiries & Office Info */}
           <div className="contact-info-card">
-            <h3 className="info-card-title font-serif">Direct Department Contacts</h3>
+            <h3 className="info-card-title font-serif">Direct Commercial Contact</h3>
             <p className="info-card-desc">
-              Get in touch directly with our specialized trading desks across time zones.
+              Get in touch directly with our global trading desk for all commercial import and export inquiries.
             </p>
 
             <div className="contact-desks">
               <div className="desk-item">
-                <div className="desk-badge">Global Trading & Export Sales</div>
+                <div className="desk-badge">Global Trading Desk</div>
                 <div className="desk-details">
-                  <div className="desk-line">
+                  <a href="mailto:fishkenya11@gmail.com" className="desk-line">
                     <Mail size={15} className="desk-icon" />
                     <span>fishkenya11@gmail.com</span>
-                  </div>
-                  <div className="desk-line">
+                  </a>
+                  <a href="tel:+251910485418" className="desk-line">
                     <Phone size={15} className="desk-icon" />
                     <span>+251910485418</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="desk-item">
-                <div className="desk-badge">Commodity Procurement & Import Desk</div>
-                <div className="desk-details">
-                  <div className="desk-line">
-                    <Mail size={15} className="desk-icon" />
-                    <span>fishkenya11@gmail.com</span>
-                  </div>
-                  <div className="desk-line">
-                    <Phone size={15} className="desk-icon" />
-                    <span>+251910485418</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="desk-item">
-                <div className="desk-badge">Quality Assurance & Origin Inspection</div>
-                <div className="desk-details">
-                  <div className="desk-line">
-                    <Mail size={15} className="desk-icon" />
-                    <span>fishkenya11@gmail.com</span>
-                  </div>
-                  <div className="desk-line">
-                    <Phone size={15} className="desk-icon" />
-                    <span>+251910485418</span>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -370,6 +342,12 @@ export default function ContactSection({ prefilledProduct }) {
           font-size: 0.88rem;
           font-weight: 500;
           color: var(--text-main);
+          text-decoration: none;
+          transition: color 0.15s ease;
+        }
+
+        .desk-line:hover {
+          color: var(--accent-gold);
         }
 
         .desk-icon {
