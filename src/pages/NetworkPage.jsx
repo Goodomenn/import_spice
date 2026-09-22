@@ -60,8 +60,8 @@ export default function NetworkPage() {
           </div>
           <h1 className="page-title font-serif">Global Distribution & Shipping Corridors</h1>
           <p className="page-lead">
-            With bonded cold-storage depots, direct port operations, and refrigerated container logistics, 
-            Zfish connects prime harvest waters with over 40 destination countries worldwide.
+            With bonded logistics depots, direct port operations, and dedicated multimodal freight corridors, 
+            FF Importing connects premier industrial manufacturing hubs and agricultural origins with over 40 destination countries worldwide.
           </p>
         </div>
       </div>

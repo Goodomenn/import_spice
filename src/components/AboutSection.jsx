@@ -50,12 +50,12 @@ export default function AboutSection() {
       <div className="container">
         {/* Top Header */}
         <div className="section-header">
-          <span className="section-subtitle">About Zfish</span>
-          <h2 className="section-title font-serif">A Trusted Global Partner in Seafood Trading</h2>
+          <span className="section-subtitle">About FF Importing</span>
+          <h2 className="section-title font-serif">A Trusted Global Partner in International Trade</h2>
           <p className="section-desc">
-            Headquartered at the crossroads of international maritime trade, Zfish bridges raw 
-            ocean harvest origins with the worlds most demanding food processors, wholesalers, 
-            and retail brands.
+            Headquartered at the crossroads of international trade, FF Importing bridges 
+            global manufacturing origins and premier agricultural harvests with the world's most demanding distributors, 
+            wholesalers, and commercial enterprises.
           </p>
         </div>
 
@@ -63,20 +63,20 @@ export default function AboutSection() {
         <div className="about-grid">
           <div className="about-text-card">
             <h3 className="about-card-title font-serif">
-              Connecting Marine Harvests with Industrial Food Markets
+              Connecting Industrial Procurement with Global Commodity Markets
             </h3>
             <p className="about-p">
-              Founded on deep maritime expertise and end-to-end cold chain management, 
-              Zfish manages the complex logistics of international seafood trade. 
-              Our integrated supply model guarantees that whether you order a single 40ft reefer 
-              container or seasonal charter shipments, product integrity remains pristine from 
-              dock to delivery.
+              Founded on international trade expertise and rigorous supply chain management, 
+              FF Importing manages the complex logistics of bilateral import and export trade. 
+              Our integrated trade model guarantees that whether you order commercial tires, storage batteries, 
+              aromatic spices, specialty coffee, sesame seeds, or farm-fresh produce, product integrity remains pristine from 
+              origin to final delivery.
             </p>
             <p className="about-p">
-              Unlike traditional brokers, we physically inspect catches at port, oversee 
-              immediate blast-freezing, and manage customs documentation with precision. 
-              Our clients in Europe, Asia, North America, and the Middle East rely on us 
-              for unwavering consistency and market intelligence.
+              Unlike traditional brokers, we physically inspect consignments at origin, oversee 
+              quality certification, and manage customs documentation with precision. 
+              Our clients in Africa, the Middle East, Europe, and Asia-Pacific rely on us 
+              for unwavering consistency and dependable supply lines.
             </p>
 
             <div className="about-stats">

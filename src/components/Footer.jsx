@@ -123,7 +123,7 @@ export default function Footer() {
         {/* Bottom Legal Bar */}
         <div className="footer-bottom">
           <div className="copyright">
-            &copy; {new Date().getFullYear()} Zfish Global B.V. All rights reserved. Registered under Chamber of Commerce (KvK Rotterdam).
+            &copy; {new Date().getFullYear()} FF Importing Global Services. All rights reserved.
           </div>
           <div className="footer-legal-links">
             <a href="#">Terms of Sale & Delivery</a>

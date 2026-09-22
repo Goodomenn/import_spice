@@ -39,7 +39,7 @@ export default function HomePage() {
             <span className="section-subtitle">Commercial Trade Divisions</span>
             <h2 className="section-title font-serif">Two Core Trading Divisions, One Global Standard</h2>
             <p className="section-desc">
-              Zfish bridges international industrial procurement with certified agricultural commodity exports, 
+              FF Importing bridges international industrial procurement with certified agricultural commodity exports, 
               providing unbroken origin traceability and tailored Incoterms 2020 delivery solutions.
             </p>
           </div>
@@ -188,7 +188,7 @@ export default function HomePage() {
                 Multi-Modal Freight Engineering & Strict Quality Assurance
               </h2>
               <p className="operations-p">
-                At Zfish, we manage end-to-end supply chain logistics across bilateral trade lanes. 
+                At FF Importing, we manage end-to-end supply chain logistics across bilateral trade lanes. 
                 From containerized bulk lashing of heavy industrial tires and batteries to hermetic moisture-shielded 
                 shipments of specialty coffee, sesame seeds, cashew nuts, and 24-hour horticultural cold-chain air freight.
               </p>

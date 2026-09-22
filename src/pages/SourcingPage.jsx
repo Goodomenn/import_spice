@@ -46,10 +46,10 @@ export default function SourcingPage() {
             <span className="crumb-sep">/</span>
             <span className="crumb-current">Sourcing & Processing</span>
           </div>
-          <h1 className="page-title font-serif">Sourcing & Cold-Chain Processing</h1>
+          <h1 className="page-title font-serif">Sourcing & Supply Chain Processing</h1>
           <p className="page-lead">
-            Unbroken thermal management, dockside quality validation, and advanced freezing technologies 
-            safeguard seafood integrity from raw marine harvest to destination discharge.
+            Unbroken quality management, factory and origin validation, and international freight coordination 
+            safeguard commodity integrity from production to destination discharge.
           </p>
         </div>
       </div>
@@ -88,11 +88,11 @@ export default function SourcingPage() {
           <div className="fleet-protocol-card">
             <div className="fleet-card-inner">
               <div className="fleet-card-text">
-                <span className="fleet-sub">DOCKSIDE AUDIT PROTOCOL</span>
-                <h3 className="fleet-title font-serif">Every Landing Monitored by Zfish Quality Inspectors</h3>
+                <span className="fleet-sub">QUALITY AUDIT PROTOCOL</span>
+                <h3 className="fleet-title font-serif">Every Consignment Monitored by FF Importing Quality Inspectors</h3>
                 <p className="fleet-desc">
-                  Our dockside procurement officers operate directly at primary fishing ports. 
-                  Before any batch is acquired, vessels undergo strict verification:
+                  Our procurement officers operate directly at primary manufacturing plants and origin collection hubs. 
+                  Before any batch is acquired, shipments undergo strict verification:
                 </p>
                 <div className="protocol-checks">
                   <div className="p-check">

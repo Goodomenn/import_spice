@@ -20,12 +20,12 @@ export default function ContactPage() {
       a: 'Our standard export MOQ is one Full Container Load (FCL), typically 1x 40ft High-Cube Reefer (~25 Metric Tons net weight) or 1x 20ft Reefer (~12-14 MT). For premium air-freight species such as Sashimi-grade Bluefin Tuna or live shellfish, we accommodate palletized shipments starting at 500kg to 1,500kg.'
     },
     {
-      q: 'What payment and credit instruments does Zfish accept for international contracts?',
+      q: 'What payment and credit instruments does FF Importing accept for international contracts?',
       a: 'We work primarily with Irrevocable Documentary Letters of Credit (L/C at sight) issued or confirmed by top-tier prime banks, Telegraphic Transfer (T/T with advance deposit and balance against copy of Bill of Lading), and credit insurance limits approved through Euler Hermes / Coface for established long-term buyers.'
     },
     {
-      q: 'Can Zfish provide official veterinary health certificates and certificates of origin for customs clearance?',
-      a: 'Yes, 100% of our export consignments are accompanied by official government-issued Veterinary Health Certificates, legal Catch Certificates (IUU compliance), EUR.1 / GSP Certificates of Origin, packing lists, and commercial invoices stamped by the relevant chamber of commerce.'
+      q: 'Can FF Importing provide official certificates of origin, inspection reports, and phytosanitary certificates for customs clearance?',
+      a: 'Yes, 100% of our consignments are accompanied by official government-issued Certificates of Origin, independent inspection certificates (SGS/Bureau Veritas), Phytosanitary Certificates, packing lists, and commercial invoices stamped by the relevant chamber of commerce.'
     },
     {
       q: 'How are product samples dispatched for laboratory testing or culinary evaluation?',

@@ -19,7 +19,7 @@ export default function GlobalPresence() {
       role: 'European Commercial HQ & Main Port Gateway',
       address: 'Havenkwartier 420, 3011 Rotterdam, The Netherlands',
       phone: '+31 (0) 10 742 8800',
-      email: 'rotterdam@zfish-global.com',
+      email: 'rotterdam@ffimporting.com',
       capacity: '35,000 Pallet Deep-Freeze Hub (-28°C)',
       keySpecies: 'Atlantic Cod, Salmon, Barents Sea Whitefish, Pelagic Mackerel',
       ports: 'Port of Rotterdam (Maasvlakte), Port of Antwerp, Hamburg'
@@ -31,7 +31,7 @@ export default function GlobalPresence() {
       role: 'Asia-Pacific Regional Trading & Transshipment',
       address: '71 Jurong Port Road, Singapore 619123',
       phone: '+65 6890 2200',
-      email: 'singapore@zfish-global.com',
+      email: 'singapore@ffimporting.com',
       capacity: '20,000 Pallet Multi-Temp Cold Facility',
       keySpecies: 'Yellowfin & Bigeye Tuna, Black Tiger Prawns, Vannamei, Tilapia',
       ports: 'Port of Singapore (PSA), Port Klang, Tanjung Pelepas'
@@ -43,7 +43,7 @@ export default function GlobalPresence() {
       role: 'Northeast Asia Quality & Sashimi Desk',
       address: 'Toyosu Logistics Center, Koto-ku, Tokyo 135-0061',
       phone: '+81 (0) 3 5548 9100',
-      email: 'tokyo@zfish-global.com',
+      email: 'tokyo@ffimporting.com',
       capacity: 'Super-Frozen Facility (-60°C Cryogenic)',
       keySpecies: 'Sashimi Tuna (Bluefin & Yellowfin), Chilean Seabass, Uni, Scallops',
       ports: 'Port of Tokyo, Yokohama, Busan'
@@ -55,7 +55,7 @@ export default function GlobalPresence() {
       role: 'North American Import & Distribution Desk',
       address: 'Pier 91 Terminal Way, Seattle, WA 98119',
       phone: '+1 (206) 883 4500',
-      email: 'usa@zfish-global.com',
+      email: 'usa@ffimporting.com',
       capacity: '25,000 Pallet Bonded Reefer Logistics Hub',
       keySpecies: 'Alaskan Pollock, Pacific Cod, Wild Pacific Salmon, Humboldt Squid',
       ports: 'Port of Seattle, Port of Tacoma, Los Angeles / Long Beach'
@@ -67,7 +67,7 @@ export default function GlobalPresence() {
       role: 'Middle East & GCC Transshipment Hub',
       address: 'Jebel Ali Free Zone (JAFZA), Dubai, UAE',
       phone: '+971 4 883 9000',
-      email: 'dubai@zfish-global.com',
+      email: 'dubai@ffimporting.com',
       capacity: '18,000 Pallet Regional Distribution Center',
       keySpecies: 'Seabream, Seabass, Indian Ocean Pelagic, Shrimps',
       ports: 'Port of Jebel Ali, Port Khalifa, Jeddah Islamic Port'
@@ -79,7 +79,7 @@ export default function GlobalPresence() {
       role: 'South American Sourcing & Processing Desk',
       address: 'Av. Carlos Julio Arosemena, Guayaquil, Ecuador',
       phone: '+593 4 220 5400',
-      email: 'latam@zfish-global.com',
+      email: 'latam@ffimporting.com',
       capacity: '15,000 Pallet Dockside Cold Storage',
       keySpecies: 'Vannamei Shrimp, Giant Squid (Pota), Mahi-Mahi, Yellowfin',
       ports: 'Puerto Marítimo de Guayaquil, Port of Callao, Valparaíso'

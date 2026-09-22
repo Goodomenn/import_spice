@@ -47,10 +47,10 @@ export default function AboutPage() {
             <span className="crumb-sep">/</span>
             <span className="crumb-current">About Us</span>
           </div>
-          <h1 className="page-title font-serif">About Zfish Global Trading</h1>
+          <h1 className="page-title font-serif">About FF Importing</h1>
           <p className="page-lead">
-            An established international trading house committed to excellence in seafood procurement, 
-            analytical quality control, and maritime cold-chain logistics.
+            An established international trading house committed to excellence in global import and export procurement, 
+            analytical quality control, and dependable international logistics.
           </p>
         </div>
       </div>
@@ -65,8 +65,8 @@ export default function AboutPage() {
             <span className="section-subtitle">Food Safety Excellence</span>
             <h2 className="section-title font-serif">Analytical Laboratory & Quality Protocols</h2>
             <p className="section-desc">
-              Every container dispatched by Zfish is backed by verified Certificates of Analysis (COA). 
-              Our multi-tiered testing protocols ensure uncompromised food safety and consumer trust.
+              Every container dispatched by FF Importing is backed by verified Certificates of Analysis (COA). 
+              Our multi-tiered testing protocols ensure uncompromised quality and consumer trust.
             </p>
           </div>
 
@@ -125,7 +125,7 @@ export default function AboutPage() {
               <div>
                 <h3 className="bottom-cta-title font-serif">Partner with Our Commercial Desk</h3>
                 <p className="bottom-cta-desc">
-                  Learn how Zfish can optimize your raw material sourcing and secure your seafood supply chain.
+                  Learn how FF Importing can optimize your raw material sourcing and secure your international supply chain.
                 </p>
               </div>
               <Link to="/contact" className="btn btn-primary">
