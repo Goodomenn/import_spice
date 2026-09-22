@@ -105,7 +105,7 @@ export default function Footer() {
               </div>
               <div className="f-contact-item">
                 <Phone size={16} className="f-icon" />
-                <span>+31 (0) 10 742 8800</span>
+                <span>+251910485418</span>
               </div>
               <div className="f-contact-item">
                 <Mail size={16} className="f-icon" />

@@ -36,12 +36,12 @@ export default function Navbar({ onSearchClick }) {
           <div className="top-bar-left">
             <span className="top-item">
               <ShieldCheck size={14} className="top-icon" />
-              <span>HACCP, ISO 22000 & FDA Compliant Cold-Chain</span>
+              <span>ISO 9001 & Incoterms 2020 Verified Trade</span>
             </span>
             <span className="top-divider">|</span>
             <span className="top-item">
               <Phone size={14} className="top-icon" />
-              <span>+31 (0) 10 742 8800 (Global Trading Desk)</span>
+              <span>+251910485418 (Global Trading Desk)</span>
             </span>
           </div>
           <div className="top-bar-right">

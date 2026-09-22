@@ -73,7 +73,7 @@ export default function ContactSection({ prefilledProduct }) {
                   </div>
                   <div className="desk-line">
                     <Phone size={15} className="desk-icon" />
-                    <span>+31 (0) 10 742 8801</span>
+                    <span>+251910485418</span>
                   </div>
                 </div>
               </div>
@@ -87,7 +87,7 @@ export default function ContactSection({ prefilledProduct }) {
                   </div>
                   <div className="desk-line">
                     <Phone size={15} className="desk-icon" />
-                    <span>+31 (0) 10 742 8805</span>
+                    <span>+251910485418</span>
                   </div>
                 </div>
               </div>
@@ -101,7 +101,7 @@ export default function ContactSection({ prefilledProduct }) {
                   </div>
                   <div className="desk-line">
                     <Phone size={15} className="desk-icon" />
-                    <span>+31 (0) 10 742 8808</span>
+                    <span>+251910485418</span>
                   </div>
                 </div>
               </div>
@@ -111,8 +111,8 @@ export default function ContactSection({ prefilledProduct }) {
               <Clock size={18} className="hours-icon" />
               <div>
                 <strong>Global Desk Operating Hours:</strong>
-                <span>Monday – Friday: 07:00 – 19:00 CET (Rotterdam HQ)</span>
-                <span>24/7 Monitoring for Live Reefer Consignments</span>
+                <span>Monday – Friday: 08:00 – 18:00 EAT (East Africa Time / GMT+3)</span>
+                <span>24/7 Monitoring for Commercial Freight Consignments</span>
               </div>
             </div>
           </div>
