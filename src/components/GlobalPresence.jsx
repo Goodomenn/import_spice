@@ -13,76 +13,76 @@ import {
 export default function GlobalPresence() {
   const hubs = [
     {
-      id: 'rotterdam',
-      city: 'Rotterdam',
-      country: 'Netherlands',
-      role: 'European Commercial HQ & Main Port Gateway',
-      address: 'Havenkwartier 420, 3011 Rotterdam, The Netherlands',
-      phone: '+31 (0) 10 742 8800',
-      email: 'rotterdam@ffimporting.com',
-      capacity: '35,000 Pallet Deep-Freeze Hub (-28°C)',
-      keySpecies: 'Atlantic Cod, Salmon, Barents Sea Whitefish, Pelagic Mackerel',
-      ports: 'Port of Rotterdam (Maasvlakte), Port of Antwerp, Hamburg'
-    },
-    {
-      id: 'singapore',
-      city: 'Singapore',
-      country: 'Singapore',
-      role: 'Asia-Pacific Regional Trading & Transshipment',
-      address: '71 Jurong Port Road, Singapore 619123',
-      phone: '+65 6890 2200',
-      email: 'singapore@ffimporting.com',
-      capacity: '20,000 Pallet Multi-Temp Cold Facility',
-      keySpecies: 'Yellowfin & Bigeye Tuna, Black Tiger Prawns, Vannamei, Tilapia',
-      ports: 'Port of Singapore (PSA), Port Klang, Tanjung Pelepas'
-    },
-    {
-      id: 'tokyo',
-      city: 'Tokyo',
-      country: 'Japan',
-      role: 'Northeast Asia Quality & Sashimi Desk',
-      address: 'Toyosu Logistics Center, Koto-ku, Tokyo 135-0061',
-      phone: '+81 (0) 3 5548 9100',
-      email: 'tokyo@ffimporting.com',
-      capacity: 'Super-Frozen Facility (-60°C Cryogenic)',
-      keySpecies: 'Sashimi Tuna (Bluefin & Yellowfin), Chilean Seabass, Uni, Scallops',
-      ports: 'Port of Tokyo, Yokohama, Busan'
-    },
-    {
-      id: 'seattle',
-      city: 'Seattle / Los Angeles',
-      country: 'United States',
-      role: 'North American Import & Distribution Desk',
-      address: 'Pier 91 Terminal Way, Seattle, WA 98119',
-      phone: '+1 (206) 883 4500',
-      email: 'usa@ffimporting.com',
-      capacity: '25,000 Pallet Bonded Reefer Logistics Hub',
-      keySpecies: 'Alaskan Pollock, Pacific Cod, Wild Pacific Salmon, Humboldt Squid',
-      ports: 'Port of Seattle, Port of Tacoma, Los Angeles / Long Beach'
-    },
-    {
       id: 'dubai',
       city: 'Dubai',
       country: 'United Arab Emirates',
-      role: 'Middle East & GCC Transshipment Hub',
-      address: 'Jebel Ali Free Zone (JAFZA), Dubai, UAE',
+      role: 'Middle East & GCC Commercial HQ & Re-Export Hub',
+      address: 'Jebel Ali Free Zone (JAFZA), South Zone, Dubai, UAE',
       phone: '+971 4 883 9000',
       email: 'dubai@ffimporting.com',
-      capacity: '18,000 Pallet Regional Distribution Center',
-      keySpecies: 'Seabream, Seabass, Indian Ocean Pelagic, Shrimps',
-      ports: 'Port of Jebel Ali, Port Khalifa, Jeddah Islamic Port'
+      capacity: '30,000 m² Bonded Logistics & Climate-Controlled Staging',
+      tradeFocus: 'Commercial & OTR Tires, Automotive Batteries, Whole Spices, Re-Export Commodities',
+      ports: 'Port of Jebel Ali, Port Khalifa (Abu Dhabi), Dubai World Central'
     },
     {
-      id: 'guayaquil',
-      city: 'Guayaquil',
-      country: 'Ecuador',
-      role: 'South American Sourcing & Processing Desk',
-      address: 'Av. Carlos Julio Arosemena, Guayaquil, Ecuador',
-      phone: '+593 4 220 5400',
-      email: 'latam@ffimporting.com',
-      capacity: '15,000 Pallet Dockside Cold Storage',
-      keySpecies: 'Vannamei Shrimp, Giant Squid (Pota), Mahi-Mahi, Yellowfin',
-      ports: 'Puerto Marítimo de Guayaquil, Port of Callao, Valparaíso'
+      id: 'mombasa',
+      city: 'Mombasa & Nairobi',
+      country: 'Kenya',
+      role: 'East African Origin Processing & Agricultural Export Desk',
+      address: 'Kilindini Harbour Industrial Area, Mombasa, Kenya',
+      phone: '+254 20 800 4500',
+      email: 'eastafrica@ffimporting.com',
+      capacity: '20,000 m² Sortex Cleaning, Coffee Warehousing & Air-Freight Staging',
+      tradeFocus: 'Washed Arabica Coffee, White Sesame Seeds, Cashew & Macadamia Nuts, Fresh Horticultural Produce',
+      ports: 'Port of Mombasa (Kilindini), Jomo Kenyatta International Airport (JKIA)'
+    },
+    {
+      id: 'qingdao',
+      city: 'Qingdao & Ningbo',
+      country: 'China',
+      role: 'Asia Industrial Procurement & Quality Engineering Center',
+      address: 'Qingdao Free Trade Port Zone, Shandong Province, China',
+      phone: '+86 532 8690 1200',
+      email: 'asia@ffimporting.com',
+      capacity: 'Factory Audit Operations & 40ft High-Cube Container Consolidation',
+      tradeFocus: 'Commercial Truck Tires (TBR 315/80R22.5), Passenger PCR, OTR Tires, Solar Batteries',
+      ports: 'Port of Qingdao, Port of Ningbo-Zhoushan, Port of Shanghai'
+    },
+    {
+      id: 'mundra',
+      city: 'Mundra & Mumbai',
+      country: 'India',
+      role: 'South Asian Spice Belt & Agricultural Procurement Desk',
+      address: 'APSEZ Logistics Park, Mundra, Gujarat 370421, India',
+      phone: '+91 22 6120 7800',
+      email: 'spices@ffimporting.com',
+      capacity: 'Sortex Seed Cleaning Terminal & Vacuum Packaging Facilities',
+      tradeFocus: 'Machine-Cleaned Cumin Seeds (Jeera 99.8%), Ground Cinnamon & Whole Quills, Agricultural Spices',
+      ports: 'Port of Mundra (APSEZ), Nhava Sheva (JNPT Mumbai)'
+    },
+    {
+      id: 'rotterdam',
+      city: 'Rotterdam & Antwerp',
+      country: 'Netherlands & Belgium',
+      role: 'European Commercial Gateway & Bonded Distribution Desk',
+      address: 'Maasvlakte Logistics Hub, 3011 Rotterdam, The Netherlands',
+      phone: '+31 (0) 10 742 8800',
+      email: 'rotterdam@ffimporting.com',
+      capacity: '25,000 m² Bonded Dry & Multi-Temp Warehouse Depot',
+      tradeFocus: 'Specialty Green Coffee, Certified Leather Hides, Pure Sesame Seeds, Export Spices',
+      ports: 'Port of Rotterdam (Maasvlakte), Port of Antwerp, Port of Hamburg'
+    },
+    {
+      id: 'addis',
+      city: 'Addis Ababa',
+      country: 'Ethiopia',
+      role: 'Specialty Coffee & Raw Commodity Origin Desk',
+      address: 'Bole Sub-City Commercial Corridor, Addis Ababa, Ethiopia',
+      phone: '+251 11 667 3400',
+      email: 'ethiopia@ffimporting.com',
+      capacity: 'Cupping Quality Laboratory, ECX Warehousing & GrainPro Hermetic Staging',
+      tradeFocus: 'Specialty Washed & Natural Arabica Coffee (Yirgacheffe, Sidamo, Guji), Humera Sesame, Finished Leather',
+      ports: 'Port of Djibouti Rail Corridor, Addis Ababa Bole International Cargo Terminal'
     }
   ];
 
@@ -94,10 +94,10 @@ export default function GlobalPresence() {
         {/* Section Header */}
         <div className="section-header">
           <span className="section-subtitle">Global Commercial Infrastructure</span>
-          <h2 className="section-title font-serif">Worldwide Offices & Cold-Storage Depots</h2>
+          <h2 className="section-title font-serif">Worldwide Trading Desks, Origin Hubs & Bonded Depots</h2>
           <p className="section-desc">
-            Strategic presence in prime global shipping corridors allows us to execute 
-            seamless customs handling, local inspections, and uninterrupted cold-chain logistics.
+            Strategic presence across primary manufacturing hubs, agricultural origin basins, and transshipment crossroads 
+            ensures seamless factory inspections, rapid customs clearance, and reliable multimodal cargo delivery.
           </p>
         </div>
 
@@ -150,7 +150,7 @@ export default function GlobalPresence() {
                 <div className="info-row">
                   <Warehouse size={18} className="info-icon" />
                   <div>
-                    <span className="info-label">Cold Storage Facility:</span>
+                    <span className="info-label">Logistics & Warehousing Facility:</span>
                     <span className="info-val">{activeHub.capacity}</span>
                   </div>
                 </div>
@@ -166,8 +166,8 @@ export default function GlobalPresence() {
                 <div className="info-row">
                   <Globe2 size={18} className="info-icon" />
                   <div>
-                    <span className="info-label">Key Sourced / Exported Species:</span>
-                    <span className="info-val">{activeHub.keySpecies}</span>
+                    <span className="info-label">Primary Trade & Commodity Focus:</span>
+                    <span className="info-val">{activeHub.tradeFocus}</span>
                   </div>
                 </div>
               </div>

@@ -16,8 +16,8 @@ export default function ContactPage() {
 
   const faqs = [
     {
-      q: 'What is the Minimum Order Quantity (MOQ) for international container exports?',
-      a: 'Our standard export MOQ is one Full Container Load (FCL), typically 1x 40ft High-Cube Reefer (~25 Metric Tons net weight) or 1x 20ft Reefer (~12-14 MT). For premium air-freight species such as Sashimi-grade Bluefin Tuna or live shellfish, we accommodate palletized shipments starting at 500kg to 1,500kg.'
+      q: 'What is the Minimum Order Quantity (MOQ) for international container shipments?',
+      a: 'Our standard trade MOQ is one Full Container Load (FCL), typically 1x 40ft High-Cube container for tires, batteries, coffee, or sesame seeds (~20-25 Metric Tons), or 1x 20ft container (~12-15 MT). For culinary spices or fresh horticultural produce via air freight, we accommodate palletized consignments starting at 500kg to 2,000kg.'
     },
     {
       q: 'What payment and credit instruments does FF Importing accept for international contracts?',
@@ -28,8 +28,8 @@ export default function ContactPage() {
       a: 'Yes, 100% of our consignments are accompanied by official government-issued Certificates of Origin, independent inspection certificates (SGS/Bureau Veritas), Phytosanitary Certificates, packing lists, and commercial invoices stamped by the relevant chamber of commerce.'
     },
     {
-      q: 'How are product samples dispatched for laboratory testing or culinary evaluation?',
-      a: 'Upon execution of a mutual commercial discussion, commercial samples (typically 2kg to 5kg in insulated dry-ice containers) are dispatched via DHL/FedEx Express Cold-Chain to your QA laboratory or culinary center within 48 to 72 hours.'
+      q: 'How are product samples dispatched for laboratory testing, cupping, or industrial evaluation?',
+      a: 'Upon execution of a mutual commercial discussion, verified commodity samples (such as green coffee beans, sesame seeds, whole cumin, tire engineering data sheets, or battery technical specs) are dispatched via DHL/FedEx Express to your QA laboratory or buying office within 48 to 72 hours.'
     }
   ];
 
@@ -45,8 +45,8 @@ export default function ContactPage() {
           </div>
           <h1 className="page-title font-serif">Commercial Trade Desk & Inquiries</h1>
           <p className="page-lead">
-            Connect with our international sales traders, fleet procurement managers, 
-            and quality assurance specialists. We respond to all formal RFQs within 24 hours.
+            Connect with our international trade desk, factory procurement managers, 
+            and commodity quality specialists. We respond to all formal RFQs within 24 hours.
           </p>
         </div>
       </div>

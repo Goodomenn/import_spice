@@ -15,36 +15,36 @@ import {
 export default function NetworkPage() {
   const corridors = [
     {
-      title: 'North Atlantic Marine Corridor',
-      fao: 'FAO Area 27 (Sub-areas I, II, IV)',
-      species: 'Atlantic Cod, Haddock, Saithe, Norwegian Atlantic Salmon, Greenland Halibut',
-      gateway: 'Port of Rotterdam (Maasvlakte) & Port of Antwerp',
-      transit: '1-3 days regional feeder; 7-12 days Transatlantic',
-      desc: 'Our primary gateway for Arctic and European wild-capture and aquaculture. Connects seamlessly with Western European cold-storage hubs and inland refrigerated rail networks.'
+      title: 'Asia-Africa Industrial & Energy Corridor',
+      fao: 'INDUSTRIAL FREIGHT LINE',
+      commodities: 'Commercial Truck Tires (TBR), Passenger Car Tires (PCR), OTR Tires, Automotive & Solar Batteries',
+      gateway: 'Port of Qingdao, Port of Ningbo, Jebel Ali (UAE), Port of Mombasa, Port of Djibouti',
+      transit: '18-24 days ocean freight (Direct FCL High-Cube service)',
+      desc: 'High-capacity industrial pipeline connecting premier tire and battery manufacturing complexes in China directly with major commercial distribution networks across East Africa and the Middle East.'
     },
     {
-      title: 'South Pacific & Humboldt Current',
-      fao: 'FAO Area 87 (Sub-areas 1, 2, 3)',
-      species: 'Giant Humboldt Squid (Dosidicus gigas), Pacific Mackerel, Mahi-Mahi, Anchoveta',
-      gateway: 'Puerto Marítimo de Guayaquil & Port of Callao (Peru)',
-      transit: '18-24 days to Asia; 14-18 days to North America',
-      desc: 'One of the worlds most nutrient-dense marine ecosystems. We operate dockside consolidation centers in Ecuador and Peru managing high-volume industrial block freezing and containerized reefer exports.'
+      title: 'East African Agricultural Export Trade Lane',
+      fao: 'AGRO-COMMODITY EXPORT LINE',
+      commodities: 'Specialty Washed Arabica Coffee, White Humera Sesame Seeds, Cashew & Macadamia Nuts, Full-Grain Leather',
+      gateway: 'Port of Mombasa (Kilindini), Port of Djibouti, Port of Rotterdam, Port of Hamburg, Jebel Ali',
+      transit: '16-22 days to Europe; 10-14 days to Middle East; 28-35 days to North America',
+      desc: 'Strategic agricultural export corridor utilizing multi-layer GrainPro hermetic protection. Safeguards origin aroma, moisture stability, and zero pest infestation for coffee and agro-commodities delivered to roasters and food processors worldwide.'
     },
     {
-      title: 'Indian Ocean & Bay of Bengal',
-      fao: 'FAO Areas 51 & 57',
-      species: 'Yellowfin Tuna, Bigeye Tuna, Black Tiger Prawns, Vannamei Shrimp',
-      gateway: 'Port of Singapore (PSA) & Jebel Ali Port (Dubai)',
-      transit: '4-7 days regional; 16-22 days to European discharge',
-      desc: 'High-speed transshipment hub providing strategic connectivity between Asian aquaculture sources and Middle Eastern/European consumer markets.'
+      title: 'South Asian Spice Belt to Global Markets',
+      fao: 'SPICES & AGRO CORRIDOR',
+      commodities: 'Machine-Cleaned Cumin Seeds (Jeera 99.8%), Pure Ground Cinnamon, Whole Quills, Agricultural Spices',
+      gateway: 'Port of Mundra (APSEZ Gujarat), Nhava Sheva (JNPT Mumbai), Jebel Ali Port, Port of Rotterdam',
+      transit: '4-7 days to Arabian Gulf / Dubai; 12-16 days to East Africa; 20-25 days to Western Europe',
+      desc: 'Direct transshipment corridor connecting historic spice-growing basins in Gujarat and Rajasthan with food manufacturers, repackers, and commercial culinary brands across the Middle East, Africa, and Europe.'
     },
     {
-      title: 'North Pacific & Bering Sea',
-      fao: 'FAO Area 67 & 61',
-      species: 'Alaskan Pollock, Pacific Cod, Wild Sockeye Salmon, Snow Crab',
-      gateway: 'Port of Seattle / Tacoma & Port of Tokyo',
-      transit: '10-14 days Transpacific corridor',
-      desc: 'Supplying industrial re-processors, surimi manufacturers, and supermarket fillet programs with high-grade, sustainable Alaskan marine resources.'
+      title: 'Perishable Horticultural Express Air-Freight Corridor',
+      fao: 'COLD-CHAIN AIR CORRIDOR',
+      commodities: 'Fresh Fine Green Beans, Snow Peas, Sugar Snaps, Fresh Vegetables & Culinary Herbs',
+      gateway: 'Jomo Kenyatta International Cargo (NBO), Addis Ababa Cargo Terminal (ADD) → LHR / AMS / DXB',
+      transit: '12-24 hours direct cold-chain flight departure to destination airport',
+      desc: 'Dedicated cold-chain air freight corridor maintaining unbroken +2°C to +4°C temperatures from packhouse pre-cooling through chartered/scheduled flights to European and Gulf supermarket programs.'
     }
   ];
 
@@ -58,10 +58,10 @@ export default function NetworkPage() {
             <span className="crumb-sep">/</span>
             <span className="crumb-current">Global Network</span>
           </div>
-          <h1 className="page-title font-serif">Global Distribution & Shipping Corridors</h1>
+          <h1 className="page-title font-serif">Global Distribution Network & Strategic Trade Corridors</h1>
           <p className="page-lead">
-            With bonded logistics depots, direct port operations, and dedicated multimodal freight corridors, 
-            FF Importing connects premier industrial manufacturing hubs and agricultural origins with over 40 destination countries worldwide.
+            With bonded logistics depots, direct factory procurement desks, and dedicated multimodal freight corridors, 
+            FF Importing connects premier industrial manufacturing hubs and agricultural harvest basins with over 40 destination countries worldwide.
           </p>
         </div>
       </div>
@@ -69,15 +69,15 @@ export default function NetworkPage() {
       {/* Global Hubs Directory */}
       <GlobalPresence />
 
-      {/* Maritime Corridors Breakdown */}
+      {/* Multimodal Corridors Breakdown */}
       <section className="corridors-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-subtitle">Maritime Trade Lanes</span>
-            <h2 className="section-title font-serif">Core Ocean Freight Shipping Corridors</h2>
+            <span className="section-subtitle">Multimodal Trade Lanes</span>
+            <h2 className="section-title font-serif">Core Ocean Freight & Air Shipping Corridors</h2>
             <p className="section-desc">
-              Continuous temperature-controlled freight agreements with leading global shipping lines 
-              (Maersk, MSC, CMA CGM, Hapag-Lloyd) guarantee container availability and priority port berthing.
+              Long-term freight agreements with leading global ocean carriers (Maersk, MSC, CMA CGM, Hapag-Lloyd) 
+              and scheduled air-cargo operators guarantee container availability, priority berthing, and intact cargo delivery.
             </p>
           </div>
 
@@ -93,15 +93,15 @@ export default function NetworkPage() {
 
                 <div className="c-details">
                   <div className="c-detail-row">
-                    <span className="c-key">Key Species:</span>
-                    <span className="c-val">{c.species}</span>
+                    <span className="c-key">Core Commodities:</span>
+                    <span className="c-val">{c.commodities}</span>
                   </div>
                   <div className="c-detail-row">
-                    <span className="c-key">Primary Hub:</span>
+                    <span className="c-key">Gateways & Ports:</span>
                     <span className="c-val">{c.gateway}</span>
                   </div>
                   <div className="c-detail-row">
-                    <span className="c-key">Transit Times:</span>
+                    <span className="c-key">Transit Profile:</span>
                     <span className="c-val">{c.transit}</span>
                   </div>
                 </div>
@@ -122,19 +122,19 @@ export default function NetworkPage() {
             <div className="incoterms-grid">
               <div className="inco-item">
                 <strong>CIF (Cost, Insurance & Freight)</strong>
-                <p>We manage ocean reefer transport and full marine cargo insurance up to your destination discharge port. Recommended for most global buyers.</p>
+                <p>We manage ocean container transport, export packing, and comprehensive marine cargo insurance up to your destination discharge port. Recommended for most global buyers.</p>
               </div>
               <div className="inco-item">
                 <strong>CFR (Cost & Freight)</strong>
-                <p>We cover freight to destination port while you manage local marine cargo insurance.</p>
+                <p>We cover international ocean freight to your destination port while you arrange local destination customs clearance and cargo insurance.</p>
               </div>
               <div className="inco-item">
                 <strong>FOB (Free on Board)</strong>
-                <p>Delivery loaded on board your designated carrier at our loading port (e.g. FOB Rotterdam, FOB Guayaquil, FOB Singapore).</p>
+                <p>Delivery loaded securely on board your contracted shipping line at our origin ports (e.g. FOB Qingdao, FOB Mombasa, FOB Mundra, FOB Djibouti).</p>
               </div>
               <div className="inco-item">
                 <strong>DDP (Delivered Duty Paid)</strong>
-                <p>Complete turnkey delivery cleared through customs directly into your regional cold-storage depot (available in EU & US markets).</p>
+                <p>Complete turnkey door delivery cleared through customs with import duties, taxes, and inland trucking prepaid directly to your warehouse depot.</p>
               </div>
             </div>
 

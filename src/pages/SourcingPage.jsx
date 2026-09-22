@@ -2,37 +2,41 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SourcingSection from '../components/SourcingSection';
 import { 
-  Snowflake, 
-  ThermometerSnowflake, 
-  Ship, 
-  Container, 
+  Cpu, 
+  Layers, 
+  Coffee, 
+  BatteryCharging, 
   ShieldCheck, 
   ArrowRight,
-  Compass,
-  CheckCircle2
+  CheckCircle2,
+  FileCheck
 } from 'lucide-react';
 
 export default function SourcingPage() {
-  const freezingTechs = [
+  const processingTechs = [
     {
-      name: 'Super-Frozen Cryogenic (-60°C)',
-      idealFor: 'Sashimi Tuna (Bluefin & Yellowfin), Chilean Seabass, Swordfish',
-      tech: 'Ultra-low temperature refrigeration that completely arrests enzymatic breakdown, oxidation, and lipid rancidity. Preserves pristine translucent cellular structure, deep crimson coloration, and natural tenderness for over 24 months without flavor degradation.'
+      name: 'Sortex Optical Color-Sorting & Rare-Earth De-Stoning',
+      idealFor: 'Natural Sesame Seeds (Humera & Wollega), Whole Cumin Seeds (Jeera), Cashew & Macadamia Nuts',
+      icon: Cpu,
+      tech: 'High-resolution dual-camera bichromatic optical sorting combined with near-infrared (NIR) spectrometry scans seed streams at over 2,000 particles per second. High-pressure air ejectors instantly isolate discolored grains, foreign seeds, micro-stones, and chaff to ensure certified 99.8%+ commercial export purity.'
     },
     {
-      name: 'Individual Quick Freezing (IQF -40°C)',
-      idealFor: 'Prawns, Fillet Portions, Scallops, Squid Rings',
-      tech: 'Fluidized air-blast freezing tunnels where items are frozen individually in under 12 minutes. Prevents ice crystals from puncturing cellular membranes, ensuring virtually zero drip-loss during kitchen thawing and consistent culinary yields.'
+      name: 'Vulcanization Curing, Ply Reinforcement & Dynamic Balancing',
+      idealFor: 'Heavy-Duty Commercial Truck Radials (TBR 315/80R22.5), Passenger PCR, Heavy OTR / Earthmovers',
+      icon: Layers,
+      tech: 'Zero-degree spiral steel belt construction with dual-compound wear-resistant rubber tread curing. Every production batch undergoes automated laser shearography, high-voltage X-ray internal ply inspection, and computerized dynamic balance screening to guarantee maximum road longevity, low rolling resistance, and DOT/ECE regulatory compliance.'
     },
     {
-      name: 'Sea-Frozen FAS (Frozen At Sea -35°C)',
-      idealFor: 'Barents Sea Cod, Haddock, Ocean Perch, Pelagic Mackerel',
-      tech: 'Processed and plate-frozen directly on factory freezer trawlers within 2 to 4 hours of net retrieval. Represents the gold standard in wild-capture freshness, locking in ocean nutrients before onshore landing.'
+      name: 'Highland Controlled Fermentation & GrainPro Preservation',
+      idealFor: 'Specialty Arabica Coffee (Washed Yirgacheffe, Sidamo, Kenya AA), Dried Pulses',
+      icon: Coffee,
+      tech: 'Cherries undergo eco-pulper processing followed by 36-to-48-hour wet aerobic fermentation and parabolic African raised bed sun drying to exactly 11.0% moisture. Stabilized green beans are hermetically sealed in multi-layer GrainPro liners with desiccants, protecting organic aromatics and cupping scores (85+ SCAA) from humidity and odor during maritime voyage.'
     },
     {
-      name: 'Controlled Atmosphere (CA) Fresh Freight',
-      idealFor: 'Air-Freight Atlantic Salmon, Halibut, Live Shellfish',
-      tech: 'Precise calibration of oxygen, carbon dioxide, and nitrogen within insulated thermal containers, combined with temperature-controlled air freight corridors for immediate delivery within 48 hours of harvest.'
+      name: 'Automated Lead-Calcium Grid Casting & Formation Cycling',
+      idealFor: 'Sealed Maintenance-Free (SMF) Automotive Batteries, Deep-Cycle Tubular Solar Storage',
+      icon: BatteryCharging,
+      tech: 'Expanded metal grid casting using high-purity lead-calcium-tin alloys prevents internal grid corrosion and water evaporation. Computer-controlled vacuum acid filling and multi-step formation tank charging guarantee uniform plate activation, high Cold Cranking Amperage (CCA), and reliable deep-cycle performance under extreme tropical temperatures.'
     }
   ];
 
@@ -46,10 +50,10 @@ export default function SourcingPage() {
             <span className="crumb-sep">/</span>
             <span className="crumb-current">Sourcing & Processing</span>
           </div>
-          <h1 className="page-title font-serif">Sourcing & Supply Chain Processing</h1>
+          <h1 className="page-title font-serif">Commodity Sourcing & Technical Processing</h1>
           <p className="page-lead">
-            Unbroken quality management, factory and origin validation, and international freight coordination 
-            safeguard commodity integrity from production to destination discharge.
+            Unbroken quality engineering, direct factory and farm-gate origin procurement, 
+            and certified industrial processing safeguard commodity integrity from source to global discharge.
           </p>
         </div>
       </div>
@@ -57,66 +61,69 @@ export default function SourcingPage() {
       {/* 5-Stage Supply Chain Roadmap */}
       <SourcingSection />
 
-      {/* Freezing Technologies Deep-Dive */}
+      {/* Processing Technologies Deep-Dive */}
       <section className="tech-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-subtitle">Thermal Preservation</span>
-            <h2 className="section-title font-serif">Advanced Industrial Freezing Technologies</h2>
+            <span className="section-subtitle">Technical Processing Engineering</span>
+            <h2 className="section-title font-serif">Advanced Processing & Quality Technologies</h2>
             <p className="section-desc">
-              Preserving protein molecular structures requires calibrated freezing curves tailored to each species. 
-              Here is how we ensure zero quality degradation across long-distance ocean voyages.
+              From optical seed purification and specialized post-harvest curing to high-precision radial tire vulcanization, 
+              we enforce rigorous processing standards across our import and export operations.
             </p>
           </div>
 
           <div className="tech-grid">
-            {freezingTechs.map((item, index) => (
-              <div key={index} className="tech-card">
-                <div className="tech-card-top">
-                  <ThermometerSnowflake size={24} className="tech-icon" />
-                  <h3 className="tech-name">{item.name}</h3>
+            {processingTechs.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <div key={index} className="tech-card">
+                  <div className="tech-card-top">
+                    <Icon size={24} className="tech-icon" />
+                    <h3 className="tech-name">{item.name}</h3>
+                  </div>
+                  <div className="tech-badge">
+                    <span>Target Commodities: <strong>{item.idealFor}</strong></span>
+                  </div>
+                  <p className="tech-desc">{item.tech}</p>
                 </div>
-                <div className="tech-badge">
-                  <span>Species: <strong>{item.idealFor}</strong></span>
-                </div>
-                <p className="tech-desc">{item.tech}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Sourcing Fleet Protocol */}
           <div className="fleet-protocol-card">
             <div className="fleet-card-inner">
               <div className="fleet-card-text">
-                <span className="fleet-sub">QUALITY AUDIT PROTOCOL</span>
-                <h3 className="fleet-title font-serif">Every Consignment Monitored by FF Importing Quality Inspectors</h3>
+                <span className="fleet-sub">TECHNICAL QUALITY & AUDIT PROTOCOL</span>
+                <h3 className="fleet-title font-serif">Every Consignment Inspected by FF Importing Quality Engineers</h3>
                 <p className="fleet-desc">
-                  Our procurement officers operate directly at primary manufacturing plants and origin collection hubs. 
-                  Before any batch is acquired, shipments undergo strict verification:
+                  Our technical inspectors and certified surveyors operate directly on factory production lines and agricultural collection depots. 
+                  Before any batch is sealed for export, consignments pass rigorous compliance gates:
                 </p>
                 <div className="protocol-checks">
                   <div className="p-check">
                     <CheckCircle2 size={16} className="check-icon" />
-                    <span>Official IUU Fishing Clearance & Logbook Verification</span>
+                    <span>Independent SGS / Bureau Veritas COA & Purity Certification</span>
                   </div>
                   <div className="p-check">
                     <CheckCircle2 size={16} className="check-icon" />
-                    <span>Core Body Temperature Measured (&lt; 2°C on landing)</span>
+                    <span>Sortex Machine Optical Purity Verification (&gt;99.8% sort)</span>
                   </div>
                   <div className="p-check">
                     <CheckCircle2 size={16} className="check-icon" />
-                    <span>Water Quality & Ice Slurry Sterilization Standards</span>
+                    <span>Tire Uniformity, Dynamic Balance & X-Ray Structural Clearance</span>
                   </div>
                   <div className="p-check">
                     <CheckCircle2 size={16} className="check-icon" />
-                    <span>Sensory Grade Testing: Organoleptic & Flesh Elasticity</span>
+                    <span>GrainPro Hermetic Sealing, Moisture Desiccants & Phytosanitary Clearance</span>
                   </div>
                 </div>
               </div>
               <div className="fleet-card-action">
                 <Link to="/contact" className="btn btn-primary">
+                  <FileCheck size={16} />
                   <span>Request Technical Data Sheet</span>
-                  <ArrowRight size={16} />
                 </Link>
               </div>
             </div>

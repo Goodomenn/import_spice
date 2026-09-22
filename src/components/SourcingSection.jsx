@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { 
-  Anchor, 
-  Snowflake, 
-  Microscope, 
+  Factory, 
+  Cpu, 
+  Sparkles, 
   Container, 
   CheckCircle2, 
   ArrowRight,
-  ShieldAlert,
-  Clock,
-  Thermometer
+  ShieldCheck,
+  PackageCheck
 } from 'lucide-react';
 
 export default function SourcingSection() {
@@ -17,62 +16,62 @@ export default function SourcingSection() {
   const steps = [
     {
       step: '01',
-      title: 'Selective Dockside Procurement',
-      subtitle: 'Catch Certification & Port Inspection',
-      icon: Anchor,
-      desc: 'Our sourcing agents inspect catches immediately upon vessel docking. We verify legal catch certificates (IUU compliance), vessel logbooks, and conduct sensory evaluation on temperature, eye clarity, gill coloration, and flesh firmness.',
+      title: 'Factory & Origin Farm-Gate Procurement',
+      subtitle: 'Direct Manufacturer Allocations & Agricultural Cooperatives',
+      icon: Factory,
+      desc: 'We secure direct volume contracts with Tier-1 tire and battery manufacturing complexes, eliminating unnecessary brokerage markups. For agricultural commodities, our procurement officers purchase directly from farm-gate farmer cooperatives in Ethiopia and Kenya, selecting prime parchment coffee, white Humera sesame seeds, and jumbo cashews directly at harvest.',
       metrics: [
-        { label: 'Dock Inspection', value: '100% of lots' },
-        { label: 'Traceability', value: 'Vessel ID & Catch Area' },
-        { label: 'Landing Window', value: '< 2 Hours' }
+        { label: 'Factory Sourcing', value: '100% Direct Allocations' },
+        { label: 'Origin Verification', value: 'Single-Origin Cooperative' },
+        { label: 'Pre-Shipment Audit', value: '< 24h Factory Gate' }
       ]
     },
     {
       step: '02',
-      title: 'Rapid IQF Blast-Freezing',
-      subtitle: 'Preserving Peak Cellular Integrity',
-      icon: Snowflake,
-      desc: 'Within hours of landing, fish are transferred into our temperature-controlled processing halls. Employing advanced IQF (Individual Quick Freezing) and cryogenic tunnels down to -40°C, the formation of large ice crystals is prevented, preserving cellular moisture and texture.',
+      title: 'Sortex Optical Cleaning & Industrial Testing',
+      subtitle: 'Machine Purity Grading & Physical Stress Analysis',
+      icon: Cpu,
+      desc: 'Agricultural seeds (cumin, sesame) undergo multi-stage Sortex bichromatic optical sorting and high-intensity rare-earth magnet separation, isolating foreign matter down to 99.8% purity. Industrial tires undergo computerized dynamic balancing, laser shearography, and high-energy X-ray testing. Storage batteries undergo automated charge-discharge cycle tests.',
       metrics: [
-        { label: 'Core Temp', value: '-35°C to -40°C' },
-        { label: 'Processing Speed', value: 'Same-day landing' },
-        { label: 'Moisture Retention', value: 'Zero cell rupture' }
+        { label: 'Seed Purity Level', value: '99.8% Sortex Grade' },
+        { label: 'Tire Dynamic Balance', value: '100% Radial Uniformity' },
+        { label: 'Battery Testing', value: 'Automated DIN/SAE CCA' }
       ]
     },
     {
       step: '03',
-      title: 'Analytical Quality & Laboratory Grading',
-      subtitle: 'Sensory, Chemical & Microbiological Screening',
-      icon: Microscope,
-      desc: 'Our in-house and accredited third-party laboratories test every batch. Screenings include Histamine testing (for scombroid species), Heavy Metals (Mercury, Cadmium, Lead), TVB-N freshness index, and complete absence of antibiotic/chemical residues.',
+      title: 'Specialty Processing, Curing & Tanning',
+      subtitle: 'Post-Harvest Fermentation, Cryo-Milling & Leather Finishing',
+      icon: Sparkles,
+      desc: 'Specialty coffee cherries undergo monitored wet-washing or natural African raised-bed sun drying to reach optimal 11% export moisture. Whole cumin and cinnamon undergo cryogenic micro-milling to retain volatile essential oils. Raw bovine hides are tanned in LWG Gold-rated tanneries into full-grain upholstery sides and machine-flayed wet-blue skins.',
       metrics: [
-        { label: 'Histamine Standard', value: '< 15 ppm' },
-        { label: 'Microbiology', value: 'Salmonella & Listeria Neg' },
-        { label: 'Laser Grading', value: '±2g accuracy' }
+        { label: 'Coffee Moisture', value: '10.5% - 11.5% Target' },
+        { label: 'Spice Volatile Oils', value: 'High Cinnamaldehyde & Terpenes' },
+        { label: 'Leather Tannage', value: 'LWG Gold & REACH Compliant' }
       ]
     },
     {
       step: '04',
-      title: 'Continuous Cold-Chain Reefer Logistics',
-      subtitle: 'Real-Time Datalogging & Ocean Freight',
+      title: 'Hermetic Barrier & Heavy Cargo Containerization',
+      subtitle: 'GrainPro Moisture Shielding & Specialized Pallet Staging',
       icon: Container,
-      desc: 'All containerized shipments utilize state-of-the-art 40ft High-Cube refrigerated reefers equipped with continuous satellite temperature monitoring and automated controlled atmosphere (CA) technology for fresh consignments.',
+      desc: 'Agricultural crops like specialty coffee and sesame are sealed in multi-layer GrainPro hermetic barrier liners inside jute bags, preventing moisture absorption and insect infestation during ocean voyages. Commercial tires are interlaced with nylon strapping, batteries are secured on ISPM-15 heat-treated pallets, and fresh produce travels in active pre-cooled reefers.',
       metrics: [
-        { label: 'Reefer Temp', value: '-25°C to -28°C' },
-        { label: 'Telemetry', value: '24/7 Satellite Track' },
-        { label: 'Container Types', value: '20ft & 40ft Reefer FCL' }
+        { label: 'Moisture Barrier', value: 'GrainPro Hermetic Liners' },
+        { label: 'Pallet Staging', value: 'ISPM-15 Heat-Treated' },
+        { label: 'Fresh Produce', value: '+2°C to +4°C Active Cold Chain' }
       ]
     },
     {
       step: '05',
-      title: 'Port Clearance & Destination Staging',
-      subtitle: 'Smooth Customs & Delivery to Facility',
+      title: 'Customs Clearance, Incoterms & Port Discharge',
+      subtitle: 'Complete Trade Dossiers & Punctual Maritime Logistics',
       icon: CheckCircle2,
-      desc: 'We handle all export/import document packets: Health Certificates, Catch Certificates, Bills of Lading, Packing Lists, and Certificates of Analysis (COA). Delivery terms include FOB port of origin, CFR, CIF destination port, or DDP cold-storage.',
+      desc: 'We manage full international documentation: Bills of Lading, Certificates of Origin, EUR.1 / GSP forms, Phytosanitary Certificates, SCAA cupping reports, DOT/ECE tire certifications, and independent SGS / Bureau Veritas COAs across CIF, CFR, FOB, and DDP delivery terms.',
       metrics: [
-        { label: 'Documentation', value: '100% Pre-cleared' },
-        { label: 'Incoterms', value: 'CIF / CFR / FOB / DDP' },
-        { label: 'Cold Storage', value: 'Bonded Port Depots' }
+        { label: 'Dossier Clearance', value: '100% Pre-cleared Documents' },
+        { label: 'Incoterms 2020', value: 'CIF / CFR / FOB / DDP' },
+        { label: 'Third-Party Survey', value: 'SGS / Bureau Veritas Certified' }
       ]
     }
   ];
@@ -85,26 +84,25 @@ export default function SourcingSection() {
       <div className="container">
         {/* Header */}
         <div className="section-header">
-          <span className="section-subtitle">Supply Chain Integrity</span>
-          <h2 className="section-title font-serif">From Ocean Dock to Global Port</h2>
+          <span className="section-subtitle">Supply Chain Integrity & Quality Engineering</span>
+          <h2 className="section-title font-serif">From Factory Floor & Farm-Gate to Global Destination</h2>
           <p className="section-desc">
-            Our multi-stage cold-chain framework guarantees complete traceability, 
-            food safety compliance, and commercial consistency across every container shipped.
+            Our multi-stage procurement and technical processing framework guarantees uncompromised quality, 
+            lot-level traceability, and precision international delivery across our entire import and export portfolio.
           </p>
         </div>
 
         {/* Step Navigation Bar */}
         <div className="step-nav-bar">
           {steps.map((item, index) => {
-            const StepIcon = item.icon;
             return (
               <button
                 key={index}
                 className={`step-tab ${activeStep === index ? 'active' : ''}`}
                 onClick={() => setActiveStep(index)}
               >
-                <span className="step-tab-num">{item.step}</span>
-                <span className="step-tab-title">{item.title.split(' ')[0]} {item.title.split(' ')[1]}</span>
+                <span className="step-tab-num">STAGE {item.step}</span>
+                <span className="step-tab-title">{item.title}</span>
               </button>
             );
           })}
@@ -335,9 +333,15 @@ export default function SourcingSection() {
           gap: 12px;
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 1024px) {
           .step-nav-bar {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+
+        @media (max-width: 768px) {
+          .step-nav-bar {
+            grid-template-columns: 1fr;
           }
 
           .step-metrics-grid {
@@ -346,6 +350,10 @@ export default function SourcingSection() {
 
           .step-card-header {
             flex-direction: column;
+          }
+
+          .step-card {
+            padding: 28px 20px;
           }
         }
       `}</style>
