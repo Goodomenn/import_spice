@@ -3,37 +3,114 @@ import { Link } from 'react-router-dom';
 import AboutSection from '../components/AboutSection';
 import { 
   Building2, 
-  History, 
   ShieldCheck, 
-  Award, 
-  Microscope, 
-  FileCheck, 
-  CheckCircle2,
   ArrowRight,
-  Anchor
+  ArrowDownLeft,
+  ArrowUpRight,
+  CircleDot,
+  BatteryCharging,
+  Sparkles,
+  Briefcase,
+  Coffee,
+  Wheat,
+  Nut,
+  Sprout,
+  CheckCircle2,
+  PackageCheck
 } from 'lucide-react';
 
 export default function AboutPage() {
-  const labTests = [
+  const importCommodities = [
     {
-      test: 'Histamine Testing (HPLC / ELISA)',
-      spec: '< 15 ppm (Stricter than EU 100 ppm limit)',
-      purpose: 'Critical for all Scombridae and pelagic species (tuna, mackerel) to guarantee absolute freshness and eliminate risk of scombroid poisoning.'
+      icon: CircleDot,
+      name: 'Commercial & OTR Tires',
+      subtitle: 'Industrial Transport & Mining Radials',
+      items: [
+        'Heavy-Duty Truck Radials (TBR 315/80R22.5)',
+        'Passenger Car Radials (PCR High Performance)',
+        'Agricultural & Earthmover (OTR / Off-The-Road)'
+      ],
+      standards: 'DOT, ECE, GCC, CCC, SASO & ISO/TS 16949 Certified'
     },
     {
-      test: 'Total Volatile Basic Nitrogen (TVB-N)',
-      spec: '< 20 mg N / 100g',
-      purpose: 'Chemical index measuring post-harvest protein breakdown and freshness integrity across whitefish and crustaceans.'
+      icon: BatteryCharging,
+      name: 'Automotive & Solar Batteries',
+      subtitle: 'Lead-Calcium & Deep-Cycle Storage',
+      items: [
+        'Sealed Maintenance-Free (SMF 12V 100Ah Starter)',
+        'Deep-Cycle Solar Tubular Batteries (12V 200Ah)',
+        'Industrial VRLA AGM Backup (12V 150Ah)'
+      ],
+      standards: 'Silver-Calcium Alloy, IEC 60896, IEC 61427 & CE Certified'
     },
     {
-      test: 'Heavy Metals Screening (ICP-MS)',
-      spec: 'Mercury < 0.5 mg/kg, Cadmium < 0.05 mg/kg, Lead < 0.1 mg/kg',
-      purpose: 'Ensures strict compliance with EU Regulation 1881/2006 and US FDA action levels for marine organisms.'
+      icon: Sparkles,
+      name: 'Aromatic Culinary Spices',
+      subtitle: 'Direct Farm-Gate Whole & Milled Spices',
+      items: [
+        'Premium Whole Cumin Seeds (Jeera Sortex 99.8% Purity)',
+        'Pure Ground Cinnamon Powder (Micro-Milled 80-100 Mesh)',
+        'Hand-Selected Whole Cinnamon Quills & Sticks'
+      ],
+      standards: 'High Volatile Oils, ISO 22000, HACCP & Spice Board Certified'
+    }
+  ];
+
+  const exportCommodities = [
+    {
+      icon: Coffee,
+      name: 'Specialty Arabica & Robusta Coffee',
+      subtitle: 'High-Altitude Washed & Natural Beans',
+      items: [
+        'Washed Kenya AA Arabica (SL28 / SL34 Screen 17/18)',
+        'Ethiopian Yirgacheffe Grade 1 Natural',
+        'Specialty Highland Peaberry & Premium Robusta'
+      ],
+      standards: 'ICO Origin Registered, SCA 86+ Cup Score Certified'
     },
     {
-      test: 'Microbiological Profiling',
-      spec: 'Salmonella: Absent / 25g, Listeria: Absent / 25g, E. Coli < 10 CFU/g',
-      purpose: 'Conducted in certified ISO 17025 accredited partner laboratories before any export container release.'
+      icon: Wheat,
+      name: 'Humera White Sesame Seeds',
+      subtitle: 'Machine-Cleaned & Organic Hulled',
+      items: [
+        'Natural White Humera Sesame Seeds (99.8% Sortex Purity)',
+        'Mechanically Hulled Food-Grade Sesame Seeds',
+        'High-Oil Content Edible Grade Sesame (> 52% Oil)'
+      ],
+      standards: 'Export Grade 1, Low Moisture (<5%), Phytosanitary Certified'
+    },
+    {
+      icon: Nut,
+      name: 'Cashew Nuts, Macadamia & Peanuts',
+      subtitle: 'Raw In-Shell & Vacuum-Packed Kernels',
+      items: [
+        'Raw Cashew Nuts in Shell (RCN KOR 48-52 lbs)',
+        'Jumbo Roasted Cashew Kernels (W180 / W240)',
+        'Shelled Style 1 Macadamia & Bold Red Runner Peanuts'
+      ],
+      standards: 'AFI Grade Standards, Nitrogen-Flushed Vacuum Export Packaging'
+    },
+    {
+      icon: Briefcase,
+      name: 'Finished & Wet-Blue Leather',
+      subtitle: 'Bovine Hides & Tanned Crust Sides',
+      items: [
+        'Full-Grain Finished Bovine Sides (1.2mm - 2.0mm)',
+        'Machine-Flayed Wet-Blue Bovine Hides (TR Grade)',
+        'Crust Goat & Sheepskin Finished Grain'
+      ],
+      standards: 'LWG Audited Tannery Sourcing, Zero Salt Defect Verification'
+    },
+    {
+      icon: Sprout,
+      name: 'Fresh Horticultural Vegetables',
+      subtitle: 'Farm-Fresh Harvest Cold-Chain Air-Bridge',
+      items: [
+        'Hand-Picked Extra Fine French Green Beans',
+        'Snow Peas & Sugar Snap Peas (Mange Tout)',
+        'Export Hass Avocados & Fresh Culinary Herbs'
+      ],
+      standards: 'GLOBALG.A.P. Certified, Dispatched within 24h of Harvest'
     }
   ];
 
@@ -49,8 +126,8 @@ export default function AboutPage() {
           </div>
           <h1 className="page-title font-serif">About FF Importing</h1>
           <p className="page-lead">
-            An established international trading house committed to excellence in global import and export procurement, 
-            analytical quality control, and dependable international logistics.
+            An established international trading house committed to excellence in industrial goods procurement, 
+            agricultural commodity export, and end-to-end global supply chain management.
           </p>
         </div>
       </div>
@@ -58,80 +135,131 @@ export default function AboutPage() {
       {/* Main About Component */}
       <AboutSection />
 
-      {/* Detailed Laboratory & Testing Infrastructure */}
-      <section className="lab-section">
+      {/* Brand-New Section: The Actual Products We Import & Export */}
+      <section className="portfolio-section">
         <div className="container">
           <div className="section-header">
-            <span className="section-subtitle">Food Safety Excellence</span>
-            <h2 className="section-title font-serif">Analytical Laboratory & Quality Protocols</h2>
+            <span className="section-subtitle">Commercial Trade Portfolio</span>
+            <h2 className="section-title font-serif">The Core Products We Import & Export</h2>
             <p className="section-desc">
-              Every container dispatched by FF Importing is backed by verified Certificates of Analysis (COA). 
-              Our multi-tiered testing protocols ensure uncompromised quality and consumer trust.
+              FF Importing bridges world-class manufacturing origins with international agricultural markets. 
+              Here is our verified commercial portfolio managed under strict quality assurance and Incoterms 2020.
             </p>
           </div>
 
-          <div className="lab-tests-grid">
-            {labTests.map((item, index) => (
-              <div key={index} className="lab-test-card">
-                <div className="lab-card-header">
-                  <Microscope size={20} className="lab-icon" />
-                  <h3 className="lab-test-name">{item.test}</h3>
-                </div>
-                <div className="lab-spec-badge">
-                  <span>Standard: <strong>{item.spec}</strong></span>
-                </div>
-                <p className="lab-test-desc">{item.purpose}</p>
+          {/* Import Division Portfolio */}
+          <div className="portfolio-division-block">
+            <div className="portfolio-division-header import-header">
+              <div className="division-badge import-badge">
+                <ArrowDownLeft size={16} />
+                <span>IMPORT DIVISION PORTFOLIO</span>
               </div>
-            ))}
-          </div>
+              <h3 className="division-heading font-serif">Industrial Goods & Culinary Imports</h3>
+              <p className="division-subtext">
+                Procured directly from ISO/TS-certified manufacturing complexes and premier spice belt origins.
+              </p>
+            </div>
 
-          {/* Corporate History & Milestones */}
-          <div className="history-block">
-            <h3 className="history-title font-serif">Two Decades of Maritime Trade Expertise</h3>
-            <div className="timeline-grid">
-              <div className="timeline-item">
-                <span className="timeline-year">2001</span>
-                <strong className="timeline-heading">Founding at Port of Rotterdam</strong>
-                <p className="timeline-desc">
-                  Established initial trading operations focused on North Atlantic pelagic species and herring distribution.
-                </p>
-              </div>
-              <div className="timeline-item">
-                <span className="timeline-year">2010</span>
-                <strong className="timeline-heading">Expansion to Asia & Indian Ocean</strong>
-                <p className="timeline-desc">
-                  Opened Singapore procurement hub and forged direct dockside agreements with long-line tuna fleets.
-                </p>
-              </div>
-              <div className="timeline-item">
-                <span className="timeline-year">2018</span>
-                <strong className="timeline-heading">Deep-Freeze Reefer Fleet Integration</strong>
-                <p className="timeline-desc">
-                  Equipped all contracted reefer containers with 24/7 satellite temperature and atmosphere monitoring.
-                </p>
-              </div>
-              <div className="timeline-item">
-                <span className="timeline-year">Today</span>
-                <strong className="timeline-heading">Global Multimodal Distribution</strong>
-                <p className="timeline-desc">
-                  Shipping over 48,000 MT annually across 42 port countries with 99.4% on-time discharge reliability.
-                </p>
-              </div>
+            <div className="portfolio-cards-grid">
+              {importCommodities.map((item, idx) => {
+                const Icon = item.icon;
+                return (
+                  <div key={idx} className="portfolio-card import-card">
+                    <div className="p-card-top">
+                      <div className="p-card-icon-wrap import-icon">
+                        <Icon size={22} />
+                      </div>
+                      <div>
+                        <h4 className="p-card-title">{item.name}</h4>
+                        <span className="p-card-sub">{item.subtitle}</span>
+                      </div>
+                    </div>
+
+                    <ul className="p-card-items">
+                      {item.items.map((it, i) => (
+                        <li key={i}>
+                          <CheckCircle2 size={14} className="p-check" />
+                          <span>{it}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="p-card-standards">
+                      <span className="std-lbl">Standards:</span>
+                      <span className="std-val">{item.standards}</span>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
-          <div className="about-bottom-cta">
+          {/* Export Division Portfolio */}
+          <div className="portfolio-division-block" style={{ marginTop: '56px' }}>
+            <div className="portfolio-division-header export-header">
+              <div className="division-badge export-badge">
+                <ArrowUpRight size={16} />
+                <span>EXPORT DIVISION PORTFOLIO</span>
+              </div>
+              <h3 className="division-heading font-serif">Agricultural Commodities & Natural Exports</h3>
+              <p className="division-subtext">
+                Direct farm-gate and cooperative sourcing backed by phytosanitary certification and prompt global freight.
+              </p>
+            </div>
+
+            <div className="portfolio-cards-grid export-grid">
+              {exportCommodities.map((item, idx) => {
+                const Icon = item.icon;
+                return (
+                  <div key={idx} className="portfolio-card export-card">
+                    <div className="p-card-top">
+                      <div className="p-card-icon-wrap export-icon">
+                        <Icon size={22} />
+                      </div>
+                      <div>
+                        <h4 className="p-card-title">{item.name}</h4>
+                        <span className="p-card-sub">{item.subtitle}</span>
+                      </div>
+                    </div>
+
+                    <ul className="p-card-items">
+                      {item.items.map((it, i) => (
+                        <li key={i}>
+                          <CheckCircle2 size={14} className="p-check" />
+                          <span>{it}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="p-card-standards">
+                      <span className="std-lbl">Standards:</span>
+                      <span className="std-val">{item.standards}</span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Commercial Desk Call-To-Action Banner */}
+          <div className="about-bottom-cta" style={{ marginTop: '56px' }}>
             <div className="bottom-cta-inner">
               <div>
-                <h3 className="bottom-cta-title font-serif">Partner with Our Commercial Desk</h3>
+                <h3 className="bottom-cta-title font-serif">Ready to Secure Your Sourcing or Export Allocation?</h3>
                 <p className="bottom-cta-desc">
-                  Learn how FF Importing can optimize your raw material sourcing and secure your international supply chain.
+                  Explore full product specifications, container load plans, or request a customized RFQ tailored to your target port.
                 </p>
               </div>
-              <Link to="/contact" className="btn btn-primary">
-                <span>Initiate Sourcing Discussion</span>
-                <ArrowRight size={16} />
-              </Link>
+              <div className="cta-action-buttons">
+                <Link to="/products" className="btn btn-primary">
+                  <PackageCheck size={16} />
+                  <span>Explore Full Catalog</span>
+                </Link>
+                <Link to="/contact" className="btn btn-secondary">
+                  <span>Contact Sourcing Desk</span>
+                  <ArrowRight size={16} />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -185,149 +313,285 @@ export default function AboutPage() {
           line-height: 1.6;
         }
 
-        .lab-section {
-          padding: 80px 0;
+        .portfolio-section {
+          padding: 88px 0;
+          background: #FAFAF7;
         }
 
-        .lab-tests-grid {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 24px;
-          margin-bottom: 64px;
-        }
-
-        .lab-test-card {
+        .portfolio-division-block {
           background: #FFFFFF;
           border: 1px solid var(--border-medium);
-          border-radius: var(--radius-md);
-          padding: 28px;
-          box-shadow: var(--shadow-sm);
-        }
-
-        .lab-card-header {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          margin-bottom: 12px;
-        }
-
-        .lab-icon {
-          color: var(--accent-gold);
-        }
-
-        .lab-test-name {
-          font-size: 1.15rem;
-          color: var(--accent-navy);
-        }
-
-        .lab-spec-badge {
-          display: inline-block;
-          background: var(--bg-milky);
-          border: 1px solid var(--border-subtle);
-          padding: 4px 10px;
-          border-radius: var(--radius-sm);
-          font-size: 0.8rem;
-          color: var(--accent-navy);
-          margin-bottom: 12px;
-        }
-
-        .lab-test-desc {
-          font-size: 0.88rem;
-          color: var(--text-muted);
-          line-height: 1.6;
-        }
-
-        .history-block {
-          background: #FFFFFF;
-          border: 1px solid var(--border-medium);
-          border-radius: var(--radius-lg);
+          border-radius: var(--radius-lg, 12px);
           padding: 40px;
-          box-shadow: var(--shadow-sm);
-          margin-bottom: 48px;
+          box-shadow: var(--shadow-sm, 0 2px 8px rgba(0, 0, 0, 0.04));
         }
 
-        .history-title {
-          font-size: 1.8rem;
-          color: var(--accent-navy);
+        .portfolio-division-header {
           margin-bottom: 32px;
-          padding-bottom: 16px;
+          padding-bottom: 20px;
           border-bottom: 1px solid var(--border-subtle);
         }
 
-        .timeline-grid {
+        .division-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 0.75rem;
+          font-weight: 800;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          padding: 6px 14px;
+          border-radius: 999px;
+          margin-bottom: 12px;
+        }
+
+        .import-badge {
+          background: rgba(14, 116, 144, 0.08);
+          color: #0e7490;
+          border: 1px solid rgba(14, 116, 144, 0.2);
+        }
+
+        .export-badge {
+          background: rgba(180, 83, 9, 0.08);
+          color: #b45309;
+          border: 1px solid rgba(180, 83, 9, 0.2);
+        }
+
+        .division-heading {
+          font-size: 1.85rem;
+          color: var(--accent-navy);
+          margin-bottom: 8px;
+        }
+
+        .division-subtext {
+          font-size: 0.95rem;
+          color: var(--text-muted);
+          max-width: 720px;
+          line-height: 1.6;
+        }
+
+        .portfolio-cards-grid {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           gap: 24px;
         }
 
-        .timeline-item {
+        .export-grid {
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        }
+
+        .portfolio-card {
+          background: #FCFCFA;
+          border: 1px solid var(--border-medium);
+          border-radius: var(--radius-md, 8px);
+          padding: 24px;
           display: flex;
           flex-direction: column;
-          gap: 6px;
+          justify-content: space-between;
+          transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
         }
 
-        .timeline-year {
-          font-size: 1.45rem;
-          font-weight: 800;
-          color: var(--accent-gold);
+        .portfolio-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+          border-color: var(--accent-gold);
         }
 
-        .timeline-heading {
-          font-size: 0.95rem;
+        .p-card-top {
+          display: flex;
+          align-items: flex-start;
+          gap: 14px;
+          margin-bottom: 16px;
+        }
+
+        .p-card-icon-wrap {
+          width: 44px;
+          height: 44px;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+
+        .import-icon {
+          background: rgba(14, 116, 144, 0.1);
+          color: #0e7490;
+        }
+
+        .export-icon {
+          background: rgba(180, 83, 9, 0.1);
+          color: #b45309;
+        }
+
+        .p-card-title {
+          font-size: 1.15rem;
+          font-weight: 700;
           color: var(--accent-navy);
+          margin-bottom: 3px;
         }
 
-        .timeline-desc {
-          font-size: 0.84rem;
+        .p-card-sub {
+          font-size: 0.8rem;
           color: var(--text-muted);
-          line-height: 1.5;
+          font-weight: 500;
+        }
+
+        .p-card-items {
+          list-style: none;
+          padding: 0;
+          margin: 0 0 20px 0;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          flex-grow: 1;
+        }
+
+        .p-card-items li {
+          display: flex;
+          align-items: flex-start;
+          gap: 8px;
+          font-size: 0.86rem;
+          color: #334155;
+          line-height: 1.45;
+        }
+
+        .p-check {
+          color: #059669;
+          flex-shrink: 0;
+          margin-top: 2px;
+        }
+
+        .p-card-standards {
+          padding-top: 14px;
+          border-top: 1px dashed var(--border-subtle);
+          font-size: 0.78rem;
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+        }
+
+        .std-lbl {
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          color: var(--text-muted);
+          font-size: 0.72rem;
+        }
+
+        .std-val {
+          color: var(--accent-navy);
+          font-weight: 600;
         }
 
         .about-bottom-cta {
-          background: #FFFFFF;
-          border: 1px solid var(--border-medium);
-          border-radius: var(--radius-md);
-          padding: 36px 40px;
-          box-shadow: var(--shadow-sm);
+          background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+          border-radius: var(--radius-lg, 12px);
+          padding: 44px 48px;
+          color: #FFFFFF;
+          box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
         }
 
         .bottom-cta-inner {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          gap: 24px;
+          gap: 28px;
           flex-wrap: wrap;
         }
 
         .bottom-cta-title {
-          font-size: 1.5rem;
-          color: var(--accent-navy);
-          margin-bottom: 6px;
+          font-size: 1.6rem;
+          color: #F8FAFC;
+          margin-bottom: 8px;
         }
 
         .bottom-cta-desc {
           font-size: 0.95rem;
-          color: var(--text-muted);
+          color: #94A3B8;
+          max-width: 620px;
+          line-height: 1.6;
+        }
+
+        .cta-action-buttons {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          flex-wrap: wrap;
+        }
+
+        .cta-action-buttons .btn-primary {
+          background: var(--accent-gold, #D97706);
+          color: #FFFFFF;
+          padding: 12px 24px;
+          border-radius: 6px;
+          font-weight: 600;
+          font-size: 0.92rem;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          text-decoration: none;
+          transition: opacity 0.2s ease;
+        }
+
+        .cta-action-buttons .btn-primary:hover {
+          opacity: 0.92;
+        }
+
+        .cta-action-buttons .btn-secondary {
+          background: transparent;
+          color: #F8FAFC;
+          border: 1px solid rgba(255, 255, 255, 0.25);
+          padding: 12px 24px;
+          border-radius: 6px;
+          font-weight: 600;
+          font-size: 0.92rem;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          text-decoration: none;
+          transition: background 0.2s ease, border-color 0.2s ease;
+        }
+
+        .cta-action-buttons .btn-secondary:hover {
+          background: rgba(255, 255, 255, 0.1);
+          border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        @media (max-width: 1024px) {
+          .portfolio-cards-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
         }
 
         @media (max-width: 900px) {
-          .lab-tests-grid {
-            grid-template-columns: 1fr;
-          }
-
-          .timeline-grid {
-            grid-template-columns: 1fr 1fr;
+          .portfolio-division-block {
+            padding: 28px 20px;
           }
 
           .bottom-cta-inner {
             flex-direction: column;
             align-items: flex-start;
           }
+
+          .about-bottom-cta {
+            padding: 32px 24px;
+          }
         }
 
-        @media (max-width: 576px) {
-          .timeline-grid {
+        @media (max-width: 640px) {
+          .portfolio-cards-grid {
             grid-template-columns: 1fr;
+          }
+
+          .cta-action-buttons {
+            flex-direction: column;
+            width: 100%;
+          }
+
+          .cta-action-buttons .btn {
+            width: 100%;
+            justify-content: center;
           }
         }
       `}</style>

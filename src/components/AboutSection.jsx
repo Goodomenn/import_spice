@@ -5,44 +5,32 @@ import {
   Microscope, 
   Scale, 
   CheckCircle, 
-  Ship, 
-  FileBadge, 
-  Anchor
+  Globe2,
+  Boxes
 } from 'lucide-react';
 
 export default function AboutSection() {
   const pillars = [
     {
-      icon: Ship,
-      title: 'Direct Dockside Sourcing',
-      desc: 'We operate long-term procurement partnerships with vetted fishing vessel fleets and certified aquaculture operators, eliminating non-value-added middlemen.'
+      icon: Building2,
+      title: 'Direct Factory & Origin Procurement',
+      desc: 'We operate long-term direct procurement allocations with certified tire and battery manufacturing complexes, alongside farm-gate origin cooperatives for agricultural commodities.'
     },
     {
       icon: Microscope,
-      title: 'Laboratory Quality Analysis',
-      desc: 'Every batch undergoes rigorous lot-by-lot inspection for histamine levels, TVB-N (Total Volatile Basic Nitrogen), microbiological safety, and heavy metals.'
+      title: 'Certified Quality & Lot Analysis',
+      desc: 'Every consignment undergoes strict batch inspection: machine-cleaned Sortex seed purity analysis, tire load and speed ratings, battery cycle-life benchmarking, and phytosanitary verification.'
     },
     {
       icon: ShieldCheck,
-      title: 'Global Regulatory Compliance',
-      desc: 'Full alignment with EU health regulations, US FDA FSVP (Foreign Supplier Verification Program), and certified under ISO 22000 and HACCP.'
+      title: 'International Trade & Regulatory Compliance',
+      desc: 'Full alignment with Incoterms 2020 (CIF, FOB, CFR), verified Certificates of Origin, EUR.1 / GSP documentation, and third-party inspection certificates (SGS, Bureau Veritas).'
     },
     {
       icon: Scale,
-      title: 'Guaranteed Contract Integrity',
-      desc: 'We secure consistent commercial availability, hedged pricing structures, and punctual shipping schedules even during peak market volatility.'
+      title: 'Guaranteed Contractual Integrity',
+      desc: 'We secure guaranteed volume allocations, transparent spot and forward pricing, and punctual maritime shipping schedules across global trade lanes.'
     }
-  ];
-
-  const certifications = [
-    'HACCP Certified',
-    'ISO 22000:2018',
-    'EU Export Approved',
-    'US FDA Registered',
-    'MSC Chain of Custody',
-    'ASC Farm Sourced',
-    'BRCGS Food Safety',
-    'IFS Food Standard'
   ];
 
   return (
@@ -51,7 +39,7 @@ export default function AboutSection() {
         {/* Top Header */}
         <div className="section-header">
           <span className="section-subtitle">About FF Importing</span>
-          <h2 className="section-title font-serif">A Trusted Global Partner in International Trade</h2>
+          <h2 className="section-title font-serif">A Trusted Global Partner in Industrial Imports & Agricultural Exports</h2>
           <p className="section-desc">
             Headquartered at the crossroads of international trade, FF Importing bridges 
             global manufacturing origins and premier agricultural harvests with the world's most demanding distributors, 
@@ -63,36 +51,21 @@ export default function AboutSection() {
         <div className="about-grid">
           <div className="about-text-card">
             <h3 className="about-card-title font-serif">
-              Connecting Industrial Procurement with Global Commodity Markets
+              Connecting Premier Manufacturing Origins with Global Commodity Markets
             </h3>
             <p className="about-p">
-              Founded on international trade expertise and rigorous supply chain management, 
-              FF Importing manages the complex logistics of bilateral import and export trade. 
-              Our integrated trade model guarantees that whether you order commercial tires, storage batteries, 
-              aromatic spices, specialty coffee, sesame seeds, or farm-fresh produce, product integrity remains pristine from 
-              origin to final delivery.
+              Founded on global trade acumen and rigorous supply chain management, 
+              FF Importing directs the cross-border logistics of industrial and agricultural commerce. 
+              Our integrated trade model guarantees that whether you order heavy-duty commercial radial tires, industrial storage batteries, 
+              aromatic spices, specialty washed Arabica coffee, pure sesame seeds, or farm-fresh horticultural exports, product integrity remains pristine from 
+              factory and farm-gate to destination delivery.
             </p>
             <p className="about-p">
               Unlike traditional brokers, we physically inspect consignments at origin, oversee 
               quality certification, and manage customs documentation with precision. 
               Our clients in Africa, the Middle East, Europe, and Asia-Pacific rely on us 
-              for unwavering consistency and dependable supply lines.
+              for unwavering consistency, competitive pricing, and dependable supply lines.
             </p>
-
-            <div className="about-stats">
-              <div className="stat-box">
-                <span className="stat-value">25+</span>
-                <span className="stat-label">Years of Trading Experience</span>
-              </div>
-              <div className="stat-box">
-                <span className="stat-value">99.4%</span>
-                <span className="stat-label">On-Time Discharge Rate</span>
-              </div>
-              <div className="stat-box">
-                <span className="stat-value">600+</span>
-                <span className="stat-label">Reefer Containers Handled/Yr</span>
-              </div>
-            </div>
           </div>
 
           <div className="about-pillars-card">
@@ -113,22 +86,6 @@ export default function AboutSection() {
                 );
               })}
             </div>
-          </div>
-        </div>
-
-        {/* Quality & Certifications Bar */}
-        <div className="certifications-bar">
-          <div className="cert-title-wrap">
-            <FileBadge size={20} className="cert-lead-icon" />
-            <span className="cert-lead-text">Internationally Audited & Certified Compliance:</span>
-          </div>
-          <div className="cert-tags-wrap">
-            {certifications.map((cert, index) => (
-              <span key={index} className="cert-tag">
-                <CheckCircle size={14} className="cert-check" />
-                <span>{cert}</span>
-              </span>
-            ))}
           </div>
         </div>
       </div>
@@ -171,33 +128,7 @@ export default function AboutSection() {
           margin-bottom: 18px;
         }
 
-        .about-stats {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 16px;
-          padding-top: 24px;
-          margin-top: 24px;
-          border-top: 1px solid var(--border-subtle);
-        }
 
-        .stat-box {
-          display: flex;
-          flex-direction: column;
-        }
-
-        .stat-value {
-          font-size: 1.75rem;
-          font-weight: 800;
-          color: var(--accent-gold);
-          letter-spacing: -0.02em;
-        }
-
-        .stat-label {
-          font-size: 0.78rem;
-          color: var(--text-muted);
-          font-weight: 600;
-          margin-top: 2px;
-        }
 
         .about-pillars-card {
           background: #FFFFFF;
@@ -260,72 +191,9 @@ export default function AboutSection() {
           line-height: 1.5;
         }
 
-        .certifications-bar {
-          background: #FFFFFF;
-          border: 1px solid var(--border-medium);
-          border-radius: var(--radius-md);
-          padding: 24px 32px;
-          display: flex;
-          align-items: center;
-          gap: 24px;
-          box-shadow: var(--shadow-sm);
-          flex-wrap: wrap;
-        }
-
-        .cert-title-wrap {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          white-space: nowrap;
-        }
-
-        .cert-lead-icon {
-          color: var(--accent-gold);
-        }
-
-        .cert-lead-text {
-          font-weight: 700;
-          font-size: 0.9rem;
-          color: var(--accent-navy);
-        }
-
-        .cert-tags-wrap {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          flex-wrap: wrap;
-        }
-
-        .cert-tag {
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-          padding: 6px 12px;
-          background: var(--bg-milky);
-          border: 1px solid var(--border-subtle);
-          border-radius: var(--radius-sm);
-          font-size: 0.8rem;
-          font-weight: 600;
-          color: var(--text-main);
-        }
-
-        .cert-check {
-          color: #10B981;
-        }
-
         @media (max-width: 992px) {
           .about-grid {
             grid-template-columns: 1fr;
-          }
-
-          .about-stats {
-            grid-template-columns: 1fr;
-            gap: 12px;
-          }
-
-          .certifications-bar {
-            flex-direction: column;
-            align-items: flex-start;
           }
         }
       `}</style>
