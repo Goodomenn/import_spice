@@ -87,8 +87,8 @@ export default function HomePage() {
                     <Sparkles size={18} />
                   </div>
                   <div className="div-cat-info">
-                    <strong>Premium Whole Spices</strong>
-                    <span>Tellicherry black pepper, bold cardamom, Zanzibar cloves, and Ceylon true cinnamon.</span>
+                    <strong>Aromatic Culinary Spices</strong>
+                    <span>Premium whole cumin seeds (Jeera) and pure ground cinnamon with whole quills.</span>
                   </div>
                 </div>
               </div>

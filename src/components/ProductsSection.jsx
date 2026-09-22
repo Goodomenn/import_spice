@@ -65,6 +65,32 @@ function PedestalArt({ category, index, productId }) {
     );
   }
 
+  // Real Photography for Spices
+  if (productId === 'natural-cumin-seeds') {
+    return (
+      <div className="pedestal-photo-wrapper">
+        <img 
+          src="/cumin-seeds.png" 
+          alt="Premium Whole Cumin Seeds (Jeera)" 
+          className="pedestal-item-photo"
+          loading="lazy"
+        />
+      </div>
+    );
+  }
+  if (productId === 'pure-ground-cinnamon') {
+    return (
+      <div className="pedestal-photo-wrapper">
+        <img 
+          src="/cinnamon-powder.png" 
+          alt="Pure Ground Cinnamon & Whole Quills" 
+          className="pedestal-item-photo"
+          loading="lazy"
+        />
+      </div>
+    );
+  }
+
   switch (category) {
     case 'tires':
       return (
@@ -103,30 +129,14 @@ function PedestalArt({ category, index, productId }) {
 
     case 'spices':
       return (
-        <svg className="pedestal-item-svg" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="80" cy="136" rx="42" ry="9" fill="rgba(0,0,0,0.55)" filter="blur(3px)" />
-          {/* Earthenware bowl */}
-          <path d="M42 102 Q80 144 118 102 Z" fill="#78350F" stroke="#92400E" strokeWidth="1.5" />
-          <ellipse cx="80" cy="102" rx="38" ry="12" fill="#9A3412" />
-          {/* Spices mound */}
-          <ellipse cx="80" cy="96" rx="34" ry="14" fill="#B45309" />
-          {/* Peppercorns */}
-          <circle cx="68" cy="92" r="3.5" fill="#1F2937" stroke="#111827" strokeWidth="0.5" />
-          <circle cx="76" cy="88" r="3.5" fill="#1F2937" />
-          <circle cx="84" cy="93" r="3" fill="#1F2937" />
-          <circle cx="94" cy="91" r="3.5" fill="#1F2937" />
-          <circle cx="73" cy="98" r="3" fill="#1F2937" />
-          <circle cx="88" cy="99" r="3" fill="#1F2937" />
-          {/* Cardamom pods */}
-          <ellipse cx="64" cy="84" rx="4" ry="7" fill="#16A34A" stroke="#15803D" strokeWidth="0.5" transform="rotate(-25 64 84)" />
-          <ellipse cx="96" cy="86" rx="4" ry="7" fill="#22C55E" stroke="#16A34A" strokeWidth="0.5" transform="rotate(30 96 86)" />
-          {/* Cinnamon quills */}
-          <rect x="74" y="60" width="5.5" height="34" rx="2" fill="#78350F" stroke="#92400E" strokeWidth="0.8" transform="rotate(-18 74 60)" />
-          <rect x="84" y="60" width="5.5" height="34" rx="2" fill="#9A3412" stroke="#B45309" strokeWidth="0.8" transform="rotate(15 84 60)" />
-          {/* Star anise */}
-          <circle cx="80" cy="76" r="5" fill="#B45309" />
-          <path d="M80 67 L80 85 M71 76 L89 76 M73 70 L87 82 M73 82 L87 70" stroke="#78350F" strokeWidth="3" strokeLinecap="round" />
-        </svg>
+        <div className="pedestal-photo-wrapper">
+          <img 
+            src="/cumin-seeds.png" 
+            alt="Spice Product" 
+            className="pedestal-item-photo"
+            loading="lazy"
+          />
+        </div>
       );
 
     case 'leather':

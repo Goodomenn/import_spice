@@ -41,7 +41,8 @@ export default function SearchModal({ isOpen, onClose, onSelectProduct }) {
                 {[
                   'Heavy Truck Tires', 
                   'Solar Tubular Batteries', 
-                  'Tellicherry Black Pepper', 
+                  'Cumin Seeds (Jeera)', 
+                  'Pure Cinnamon Powder', 
                   'Kenya AA Coffee', 
                   'Humera White Sesame', 
                   'Roasted Cashews', 

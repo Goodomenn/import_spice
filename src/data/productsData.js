@@ -4,7 +4,7 @@ export const categoriesMeta = {
   import: [
     { id: 'tires', name: 'Tires', label: 'Commercial & OTR Tires', icon: 'CircleDot', division: 'import', description: 'Heavy-duty commercial radial tires, passenger car radials, and agricultural OTR tires engineered for extreme load bearing.' },
     { id: 'batteries', name: 'Batteries', label: 'Automotive & Solar Batteries', icon: 'BatteryCharging', division: 'import', description: 'Maintenance-free calcium-alloy automotive batteries, deep-cycle solar tubular batteries, and telecom backup cells.' },
-    { id: 'spices', name: 'Spices', label: 'Premium Culinary Spices', icon: 'Sparkles', division: 'import', description: 'Sun-dried whole and ground spices sourced directly from historic spice belt plantations with high volatile oil content.' }
+    { id: 'spices', name: 'Spices', label: 'Premium Culinary Spices', icon: 'Sparkles', division: 'import', description: 'Whole aromatic cumin seeds and micro-milled cinnamon powder sourced directly from premier plantations with certified purity.' }
   ],
   export: [
     { id: 'leather', name: 'Leather Products', label: 'Bovine & Crust Leather', icon: 'Briefcase', division: 'export', description: 'Premium wet-blue bovine hides, finished full-grain leather sides, and bespoke handcrafted leather goods.' },
@@ -130,73 +130,40 @@ export const productsData = [
   // IMPORT: SPICES
   // ==========================================
   {
-    id: 'tellicherry-black-pepper',
-    name: 'Tellicherry Garbled Extra Bold Black Pepper (TGEB)',
+    id: 'natural-cumin-seeds',
+    name: 'Premium Whole Cumin Seeds (Jeera)',
     category: 'spices',
     division: 'import',
-    subtitle: 'Sun-Dried Malabar Coast Whole Black Peppercorns',
+    subtitle: 'Sun-Dried Golden Brown Aromatic Cumin Seeds',
     specs: {
-      origin: 'Malabar Coast / Western Ghats Spice Plantations',
-      grade: 'TGEB (Tellicherry Garbled Extra Bold) 4.75mm+ Berry Size',
-      density: '570 - 600 g/l Bulk Density',
-      piperine: 'Minimum 5.5% - 6.2% Natural Piperine Content',
-      moisture: 'Max 11.5% with Machine Destoned / Magnet Cleaned',
-      certifications: 'ISO 22000, HACCP, ASTA Cleanliness Standard'
+      origin: 'Gujarat & Rajasthan Certified Spice Belts',
+      grade: 'Machine Cleaned 99.5% / Sortex Cleaned 99.8% Purity',
+      volatileOil: 'Min 2.5% - 3.5% Essential Volatile Oils',
+      moisture: 'Max 9.0% (Low Moisture for Long Shelf Life)',
+      flavorProfile: 'Warm, Earthy, Pungent & Distinct Bittersweet Aroma',
+      certifications: 'ISO 22000, HACCP, FSSAI, Spice Board Certified'
     },
-    packaging: '25kg / 50kg Double-Lined Multiwall Kraft Paper Bags or Jute Sacks with Food-Grade Poly Liner',
-    description: 'The world benchmark for whole black peppercorns. Extra bold berries sun-cured to a rich dark color, providing pungent aromatics, complex fruity undertones, and robust sharp heat.'
+    packaging: '25kg / 50kg Multiwall Paper Bags or PP Bags with Food-Grade Inner Poly Liner',
+    description: 'Direct origin procurement of whole cumin seeds harvested at peak ripeness. Rigorously destoned, machine-cleaned, and Sortex-sorted to eliminate impurities. Boasting high essential oil concentrations for robust culinary aroma, seasoning blends, and essential oil distillation.'
   },
   {
-    id: 'green-cardamom-bold',
-    name: 'Green Cardamom Extra Bold (8mm+ Jumbo Pods)',
+    id: 'pure-ground-cinnamon',
+    name: 'Pure Ground Cinnamon & Whole Quills',
     category: 'spices',
     division: 'import',
-    subtitle: 'Vibrant Emerald Green Whole Cardamom Pods',
+    subtitle: 'Fine Ground Aromatic Cinnamon Powder & Hand-Selected Sticks',
     specs: {
-      origin: 'High-Altitude Cloud Forest Plantations',
-      grade: 'Alleppey Green Extra Bold (AGEB) 8mm and 8.5mm+',
-      color: 'Intense Natural Deep Green (Zero Artificial Coloring)',
-      volatileOil: '7.5% - 8.5% Essential Volatile Oils',
-      moisture: 'Max 10% carefully kiln-cured in wood-fired dryers',
-      certifications: 'Spices Board Certified, Phytosanitary Certificate'
+      origin: 'Historic Spice Plantations (Ceylon & Southeast Asia)',
+      grade: 'Micro-Milled 80-100 Mesh Powder & Cleaned Quills',
+      cinnamaldehyde: 'Min 65% - 75% Active Cinnamaldehyde Content',
+      volatileOil: 'Min 2.0% - 2.8% Natural Essential Oil',
+      moisture: 'Max 10.0% Cold-Milled to Preserve Volatiles',
+      certifications: 'ISO 22000, HACCP, Non-GMO, Phytosanitary Certified'
     },
-    packaging: '5kg Inner Food-Grade Carton x 2 per 10kg Master Carton or 25kg Poly Bags',
-    description: 'Known as the Queen of Spices, our premium jumbo green cardamom pods are hand-picked at peak maturity, gently dried to seal in intoxicating camphor and sweet citrus aromatics.'
+    packaging: '20kg / 25kg Poly-Lined Export Cartons or Vacuum-Sealed Bags',
+    description: 'Finely milled from choice sun-cured cinnamon bark and accompanied by select whole quills. Features an alluring sweet-woody fragrance, rich mahogany-amber color, and smooth warming taste. Perfectly suited for industrial confectionery, bakery manufacturing, savory spice rubs, and extract production.'
   },
-  {
-    id: 'zanzibar-whole-cloves',
-    name: 'Zanzibar Whole Cloves (Hand-Sorted Grade 1)',
-    category: 'spices',
-    division: 'import',
-    subtitle: 'Sun-Cured Aromatic Flower Buds with Full Heads',
-    specs: {
-      origin: 'Zanzibar & Madagascar Archipelago Estates',
-      grade: 'Hand-Picked Special (HPS) / FAQ Grade 1',
-      eugenolContent: '18% - 21% Eugenol Essential Oil',
-      headlessTolerance: '< 2.5% Maximum Headless Cloves',
-      moisture: 'Max 12.0% with Negligible Foreign Matter (<0.5%)',
-      certifications: 'HACCP, Bureau of Standards Export Certificate'
-    },
-    packaging: '10kg / 25kg Poly-lined export cartons or woven PP bags',
-    description: 'Rich dark reddish-brown clove buds renowned worldwide for their high essential oil content, intense fragrance, and whole intact heads. Essential for culinary, extract, and pharmaceutical uses.'
-  },
-  {
-    id: 'ceylon-cinnamon-quills',
-    name: 'Ceylon Cinnamon Alba Grade (True Cinnamon)',
-    category: 'spices',
-    division: 'import',
-    subtitle: 'Delicate Hand-Rolled Cinnamomum Verum Quills',
-    specs: {
-      origin: 'Southern Sri Lanka Organic Certified Plantations',
-      grade: 'Alba Grade (Pencil-thin quills under 6mm diameter)',
-      coumarin: '< 0.004% Safe Natural Trace (Ultra-Low Coumarin)',
-      oilContent: '2.5% - 3.2% Sweet Cinnamaldehyde',
-      appearance: 'Smooth Pale Tan Golden Multi-Layered Rolls',
-      certifications: 'USDA Organic, EU Organic, ISO 6539'
-    },
-    packaging: '25kg Bundles or Cut Lengths in Custom Export Cartons',
-    description: 'The pinnacle of true cinnamon. Hand-peeled and tightly rolled like Havana cigars, Ceylon Alba yields a delicate, sweet floral aroma without the harsh astringency of Cassia bark.'
-  },
+
 
   // ==========================================
   // EXPORT: LEATHER PRODUCTS

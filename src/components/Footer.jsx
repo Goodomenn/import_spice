@@ -72,7 +72,7 @@ export default function Footer() {
             <ul className="footer-nav-list">
               <li><Link to="/products">Commercial & Heavy OTR Tires</Link></li>
               <li><Link to="/products">Automotive & Solar Batteries</Link></li>
-              <li><Link to="/products">Malabar & Zanzibar Spices</Link></li>
+              <li><Link to="/products">Cumin Seeds & Pure Cinnamon</Link></li>
               <li><Link to="/products">Kenya AA Washed Arabica Coffee</Link></li>
               <li><Link to="/products">Humera White Sesame Seeds</Link></li>
               <li><Link to="/products">Raw & Roasted Cashews / Nuts</Link></li>
