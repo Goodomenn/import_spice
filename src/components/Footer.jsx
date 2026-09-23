@@ -4,8 +4,6 @@ import {
   Mail, 
   Phone, 
   MapPin, 
-  ShieldCheck, 
-  Award, 
   ArrowUp, 
   FileText
 } from 'lucide-react';
@@ -41,29 +39,14 @@ export default function Footer() {
         <div className="footer-grid">
           {/* Col 1: Brand info */}
           <div className="footer-col brand-col">
-            <Link to="/" className="footer-logo" title="FF International Import & Export Services">
+            <Link to="/" className="footer-logo" title="FF Importing">
               <img 
                 src="/logo.png" 
-                alt="FF International Import & Export Services" 
+                alt="FF Importing" 
                 className="footer-logo-img" 
               />
+              <span className="footer-brand-name">FF Importing</span>
             </Link>
-
-            <p className="footer-bio">
-              International trading house specializing in industrial imports (commercial tires, storage batteries, culinary spices) 
-              and premier exports (specialty coffees, pure sesame seeds, cashew & macadamia nuts, leather hides, and fresh farm vegetables).
-            </p>
-
-            <div className="footer-compliance-badges">
-              <span className="comp-badge">
-                <ShieldCheck size={14} />
-                <span>ISO 9001:2015</span>
-              </span>
-              <span className="comp-badge">
-                <Award size={14} />
-                <span>GLOBALG.A.P. Certified</span>
-              </span>
-            </div>
           </div>
 
           {/* Col 2: Products */}
@@ -190,41 +173,24 @@ export default function Footer() {
         .footer-logo {
           display: flex;
           align-items: center;
+          gap: 12px;
           margin-bottom: 16px;
           text-decoration: none;
-          line-height: 0;
         }
 
         .footer-logo-img {
-          height: 44px;
+          height: 48px;
           max-width: 190px;
           width: auto;
           object-fit: contain;
         }
 
-        .footer-bio {
-          font-size: 0.88rem;
-          color: var(--text-muted);
-          line-height: 1.6;
-          margin-bottom: 20px;
-        }
-
-        .footer-compliance-badges {
-          display: flex;
-          gap: 10px;
-        }
-
-        .comp-badge {
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-          padding: 4px 10px;
-          background: #FFFFFF;
-          border: 1px solid var(--border-medium);
-          border-radius: var(--radius-sm);
-          font-size: 0.76rem;
-          font-weight: 600;
+        .footer-brand-name {
+          font-family: var(--font-serif);
+          font-size: 1.3rem;
+          font-weight: 700;
           color: var(--accent-navy);
+          letter-spacing: -0.01em;
         }
 
         .footer-col-title {
