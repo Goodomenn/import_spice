@@ -260,29 +260,29 @@ export default function HomePage() {
         <div className="container">
           <div className="section-header">
             <span className="section-subtitle">International Gateways</span>
-            <h2 className="section-title font-serif">Connecting 45+ Destination Ports & Hubs</h2>
+            <h2 className="section-title font-serif">Connecting Major Global Ports & Trade Hubs</h2>
             <p className="section-desc">
-              With commercial trading desks and logistics handling partners across key trade crossroads, 
-              we provide reliable FOB, CFR, CIF, and DDP delivery terms worldwide.
+              Our maritime freight operations connect key international seaports and transit hubs across East Africa, 
+              the Middle East, Asia, and Europe, providing seamless container handling and dependable ocean delivery.
             </p>
           </div>
 
           <div className="network-teaser-grid">
             <div className="net-hub-box">
-              <span className="net-hub-city">Mombasa & Nairobi (East Africa)</span>
-              <span className="net-hub-role">Origin Export Hub: Coffee, Sesame, Nuts, Vegetables & Leather</span>
+              <span className="net-hub-city">East African Ports</span>
+              <span className="net-hub-role">Primary regional gateways handling agricultural commodity exports and incoming commercial cargo</span>
             </div>
             <div className="net-hub-box">
-              <span className="net-hub-city">Rotterdam (Europe)</span>
-              <span className="net-hub-role">European Trade Gateway & Bonded Warehousing Logistics</span>
+              <span className="net-hub-city">Middle East & Gulf Hubs</span>
+              <span className="net-hub-role">Strategic transshipment and distribution centers connecting intercontinental shipping routes</span>
             </div>
             <div className="net-hub-box">
-              <span className="net-hub-city">Dubai (Middle East & GCC)</span>
-              <span className="net-hub-role">Regional Re-Export Transshipment & Distribution Center</span>
+              <span className="net-hub-city">Asian Seaports</span>
+              <span className="net-hub-role">Major departure points for manufactured industrial supplies, automotive tires, batteries, and spices</span>
             </div>
             <div className="net-hub-box">
-              <span className="net-hub-city">Singapore / Shanghai (Asia-Pac)</span>
-              <span className="net-hub-role">Industrial Tires, Batteries & Machinery Procurement Desk</span>
+              <span className="net-hub-city">European Destination Ports</span>
+              <span className="net-hub-role">Key continental discharge terminals facilitating smooth clearance and regional distribution</span>
             </div>
           </div>
 
