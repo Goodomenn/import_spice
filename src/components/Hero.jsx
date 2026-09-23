@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, FileCheck, Shield } from 'lucide-react';
+import { ArrowRight, FileCheck } from 'lucide-react';
 
 export default function Hero({ onOpenQuote }) {
   return (
@@ -9,7 +9,6 @@ export default function Hero({ onOpenQuote }) {
         {/* Main Content */}
         <div className="hero-content">
           <div className="hero-badge">
-            <Shield size={14} className="badge-icon" />
             <span>GLOBAL SPICE SOURCING & INTERNATIONAL IMPORT AND EXPORT</span>
           </div>
 
