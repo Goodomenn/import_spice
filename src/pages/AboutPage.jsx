@@ -110,7 +110,7 @@ export default function AboutPage() {
         'Snow Peas & Sugar Snap Peas (Mange Tout)',
         'Export Hass Avocados & Fresh Culinary Herbs'
       ],
-      standards: 'GLOBALG.A.P. Certified, Dispatched within 24h of Harvest'
+      standards: 'Dispatched within 24h of Harvest, Strict Cold-Chain Transit'
     }
   ];
 

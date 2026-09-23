@@ -36,7 +36,7 @@ export default function Navbar({ onSearchClick }) {
           <div className="top-bar-left">
             <span className="top-item">
               <ShieldCheck size={14} className="top-icon" />
-              <span>ISO 9001 & Incoterms 2020 Verified Trade</span>
+              <span>Verified Global Commercial Trade</span>
             </span>
             <span className="top-divider">|</span>
             <span className="top-item">

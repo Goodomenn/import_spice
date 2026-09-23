@@ -238,8 +238,6 @@ export default function HomePage() {
                 </p>
 
                 <div className="cert-mini-grid">
-                  <div className="cert-mini-item">ISO 9001:2015</div>
-                  <div className="cert-mini-item">GLOBALG.A.P.</div>
                   <div className="cert-mini-item">DOT / ECE Certified</div>
                   <div className="cert-mini-item">SCA Specialty Coffee</div>
                   <div className="cert-mini-item">ASTA Spices Standard</div>
