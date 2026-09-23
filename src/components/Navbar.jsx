@@ -62,16 +62,17 @@ export default function Navbar({ onSearchClick }) {
       <nav className="main-nav">
         <div className="container nav-inner">
           {/* Brand Logo */}
-          <Link to="/" className="brand-logo" title="FF International Import & Export Services">
+          <Link to="/" className="brand-logo" title="FF Importing">
             <img 
-              src="/logo.png" 
-              alt="FF International Import & Export Services" 
+              src="/logo-icon.png" 
+              alt="FF Importing" 
               className="brand-logo-img" 
             />
           </Link>
 
           {/* Desktop Nav Links */}
           <div className="nav-links">
+            <NavLink to="/" className={navItemClass} end>Home</NavLink>
             <NavLink to="/products" className={navItemClass}>Products</NavLink>
             <NavLink to="/about" className={navItemClass}>About Us</NavLink>
             <NavLink to="/sourcing" className={navItemClass}>Sourcing & Processing</NavLink>
@@ -111,6 +112,15 @@ export default function Navbar({ onSearchClick }) {
       {mobileMenuOpen && (
         <div className="mobile-drawer">
           <div className="mobile-links">
+            <NavLink 
+              to="/" 
+              className="mobile-link" 
+              end
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span>Home</span>
+              <ChevronRight size={18} />
+            </NavLink>
             <NavLink 
               to="/products" 
               className="mobile-link" 

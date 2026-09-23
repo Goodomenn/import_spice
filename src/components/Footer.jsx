@@ -41,7 +41,7 @@ export default function Footer() {
           <div className="footer-col brand-col">
             <Link to="/" className="footer-logo" title="FF Importing">
               <img 
-                src="/logo.png" 
+                src="/logo-icon.png" 
                 alt="FF Importing" 
                 className="footer-logo-img" 
               />
