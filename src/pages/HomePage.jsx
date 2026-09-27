@@ -3,7 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import Hero from '../components/Hero';
 import { 
   ArrowRight, 
-  CheckCircle2
+  CheckCircle2,
+  FileText
 } from 'lucide-react';
 
 export default function HomePage() {
