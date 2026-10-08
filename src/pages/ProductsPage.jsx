@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link, useNavigate } from 'react-router-dom';
 import ProductsSection from '../components/ProductsSection';
 import { Package, ShieldCheck, Thermometer, FileCheck, ArrowRight } from 'lucide-react';
@@ -12,6 +13,11 @@ export default function ProductsPage() {
 
   return (
     <div className="products-page">
+      <Helmet>
+        <title>Products | FF International Import &amp; Export Ethiopia</title>
+        <meta name="description" content="Explore FF International's import and export product portfolio including specialty coffees, sesame seeds, cashew nuts, leather hides, spices, and more from Ethiopia." />
+        <link rel="canonical" href="https://www.ffimoprting.com/products" />
+      </Helmet>
       {/* Page Header Banner */}
       <div className="page-header-banner">
         <div className="container">

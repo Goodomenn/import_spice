@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link, useNavigate } from 'react-router-dom';
 import Hero from '../components/Hero';
 import { 
@@ -12,6 +13,11 @@ export default function HomePage() {
 
   return (
     <div className="home-page">
+      <Helmet>
+        <title>FF International | Import &amp; Export Services in Ethiopia</title>
+        <meta name="description" content="FF International provides reliable import and export services in Ethiopia, helping businesses source, import and manage international trade efficiently. Contact us today." />
+        <link rel="canonical" href="https://www.ffimoprting.com/" />
+      </Helmet>
       {/* Hero Section */}
       <Hero onOpenQuote={() => navigate('/contact')} />
 

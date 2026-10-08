@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import SourcingSection from '../components/SourcingSection';
 
@@ -6,6 +7,11 @@ export default function SourcingPage() {
 
   return (
     <div className="sourcing-page">
+      <Helmet>
+        <title>Sourcing &amp; Processing | FF International Ethiopia</title>
+        <meta name="description" content="FF International's sourcing and processing capabilities in Ethiopia. We handle procurement, quality control, and logistics for international trade." />
+        <link rel="canonical" href="https://www.ffimoprting.com/sourcing" />
+      </Helmet>
       {/* Page Header Banner */}
       <div className="page-header-banner">
         <div className="container">

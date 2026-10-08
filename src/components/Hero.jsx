@@ -9,18 +9,17 @@ export default function Hero({ onOpenQuote }) {
         {/* Main Content */}
         <div className="hero-content">
           <div className="hero-badge">
-            <span>GLOBAL SPICE SOURCING & INTERNATIONAL IMPORT AND EXPORT</span>
+            <span>IMPORT &amp; EXPORT SERVICES · ETHIOPIA</span>
           </div>
 
           <h1 className="hero-title font-serif">
-            Delivering Premium Import and Export
+            Reliable Import &amp; Export Services in Ethiopia
           </h1>
 
           <p className="hero-description">
-            FF International is an international trading and logistics powerhouse supplying heavy-duty tires, 
-            automotive batteries, and aromatic spices for import, while exporting prime leather products, 
-            world-renowned specialty coffee, pure sesame seeds, nutrient-dense nuts, and fresh farm-grown vegetables. 
-            Backed by origin verification, quality standards, and seamless global freight operations.
+            FF International provides professional import and export solutions for businesses in Ethiopia. 
+            We help clients source products internationally and manage the import and export process 
+            with a focus on reliability, efficiency and customer satisfaction.
           </p>
 
           <div className="hero-actions">

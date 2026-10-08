@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import AboutSection from '../components/AboutSection';
 import { 
@@ -116,6 +117,11 @@ export default function AboutPage() {
 
   return (
     <div className="about-page">
+      <Helmet>
+        <title>About FF International | Import &amp; Export Ethiopia</title>
+        <meta name="description" content="Learn about FF International, a trusted import and export company based in Addis Ababa, Ethiopia. Discover our story, mission, and global trade expertise." />
+        <link rel="canonical" href="https://www.ffimoprting.com/about" />
+      </Helmet>
       {/* Page Header Banner */}
       <div className="page-header-banner">
         <div className="container">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import GlobalPresence from '../components/GlobalPresence';
 import { 
@@ -50,6 +51,11 @@ export default function NetworkPage() {
 
   return (
     <div className="network-page">
+      <Helmet>
+        <title>Global Network | FF International Ethiopia</title>
+        <meta name="description" content="FF International's global trade network connects Ethiopia to markets across Africa, the Middle East, Europe, and Asia-Pacific for reliable import and export." />
+        <link rel="canonical" href="https://www.ffimoprting.com/network" />
+      </Helmet>
       {/* Page Header Banner */}
       <div className="page-header-banner">
         <div className="container">

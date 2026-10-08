@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link, useSearchParams } from 'react-router-dom';
 import ContactSection from '../components/ContactSection';
 import { 
@@ -35,6 +36,11 @@ export default function ContactPage() {
 
   return (
     <div className="contact-page">
+      <Helmet>
+        <title>Contact FF International | Ethiopia Import &amp; Export</title>
+        <meta name="description" content="Get in touch with FF International in Addis Ababa, Ethiopia. Request a quote for import and export services. Call +251910485418 or email us today." />
+        <link rel="canonical" href="https://www.ffimoprting.com/contact" />
+      </Helmet>
       {/* Page Header Banner */}
       <div className="page-header-banner">
         <div className="container">
